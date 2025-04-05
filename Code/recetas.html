@@ -1,11 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BuenAguacate</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="LogoBuenaguacate.png" alt="Logo" class="logo"> 
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#productos" class="nav-link">Productos</a>
+            <a href="#recetas" class="nav-link">Recetas</a>
+            <div class="nav-dropdown">
+                <a href="#nosotros" class="nav-link dropdown-btn">Nosotros</a>
+                <div class="dropdown-content">
+                    <a href="#certificados">Certificados de Calidad</a>
+                    <a href="#empresa">Nuestra Empresa</a>
+                    <a href="#comercializacion">Comercialización</a>
+                </div>
+            </div>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </div>
+        
+        <!-- BOTÓN USUARIO -->
+        <div class="nav-right">
+            <div class="user-dropdown">
+                <button class="user-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
+                        <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
+                        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </button>
+                <div class="user-menu">
+                    <a href="#">Iniciar Sesión</a>
+                    <a href="#">Suscríbete</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN DE RECETAS -->
+    <section id="recetas" class="seccion-recetas">
+        <h2>Recetas con Aguacate</h2>
+        <div class="contenedor-recetas">
+            <div class="tarjeta-receta">
+                <img src="imagenes/receta1.jpg" alt="Cestitas rellenas con aguacate">
+                <p>Esta receta de cestitas rellenas es una manera sana y deliciosa de comer aguacate...</p>
+            </div>
+            <div class="tarjeta-receta">
+                <img src="imagenes/receta2.jpg" alt="Guacamole con queso">
+                <p>Hay poca gente a la que no le guste el guacamole... esta receta te encantará.</p>
+            </div>
+            <div class="tarjeta-receta">
+                <img src="imagenes/receta3.jpg" alt="Sopa de aguacate y almendras">
+                <p>Si no sabes cómo aprovechar algunas almendras, esta receta te encantará...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puedes continuar agregando las otras secciones aquí -->
+    <!-- <section id="productos">...</section> -->
+    <!-- <section id="nosotros">...</section> -->
+    <!-- <section id="contacto">...</section> -->
+
 </body>
 </html>
