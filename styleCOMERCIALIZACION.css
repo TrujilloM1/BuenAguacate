@@ -1,296 +1,332 @@
 /* -------------------------------- */
-/*          ESTILOS GENERALES       */
-/* -------------------------------- */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #d2f5b6;
-  }
+    /*          ESTILOS GENERALES       */
+    /* -------------------------------- */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d2f5b6;
+      }
+      
+      /* -------------------------------- */
+      /*             NAVBAR               */
+      /* -------------------------------- */
+      .navbar {
+        background-color: #a3e635;
+        height: 70px;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+      }
+      
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      .logo {
+        width: 45px;
+        height: auto;
+        object-fit: contain;
+      }
+      
+      .nav-link {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 25px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+      
+      .nav-dropdown {
+        position: relative;
+      }
+      
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        background-color: rgba(154, 237, 90, 0.5);
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        min-width: 160px;
+      }
+      
+      .dropdown-content a {
+        display: block;
+        color: white;
+        padding: 12px;
+        text-decoration: none;
+      }
+      
+      .dropdown-content a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+      
+      .nav-dropdown:hover .dropdown-content {
+        display: block;
+      }
+      
+      .nav-right {
+        display: flex;
+        align-items: center;
+      }
+      
+      .user-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .user-dropdown {
+        position: relative;
+      }
+      
+      .user-menu {
+        display: none;
+        position: absolute;
+        top: 115%;
+        right: 0;
+        background-color: rgba(154, 237, 90, 0.5);
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        min-width: 160px;
+      }
+      
+      .user-menu a {
+        color: white;
+        padding: 12px;
+        display: block;
+        text-decoration: none;
+      }
+      
+      .user-menu a:hover {
+        background-color: #f1f1f1;
+        color: black;
+      }
+      
+      .user-menu.show {
+        display: block;
+      }
+      
+      /* -------------------------------- */
+      /*      ENCABEZADO SUPERIOR         */
+      /* -------------------------------- */
+      .encabezado-superior {
+        background: linear-gradient(to bottom, #d0ff88, #a3e635);
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .contenedor-logo-texto {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      .logo-superior {
+        width: 55px;
+        height: auto;
+        object-fit: contain;
+      }
+      
+      .titulo-principal {
+        font-size: 2rem;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* -------------------------------- */
+      /*        SECCIÓN ALIADOS           */
+      /* -------------------------------- */
+      .seccion-titulo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: #ccf4b1;
+        padding: 20px 0;
+      }
+      
+      .titulo-principal {
+        font-family: 'Pacifico', cursive;
+        font-size: 2.5rem;
+        color: white;
+        text-shadow: 2px 2px 5px #888;
+        margin: 0;
+      }
+      
+      .barra-lateral {
+        width: 100%;
+        max-width: 450px;
+        height: 15px;
+        background: linear-gradient(to bottom, #c1a849, #a48e3b);
+        border-radius: 10px;
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
+      }
+      
+      @media (max-width: 600px) {
+        .seccion-titulo {
+          flex-direction: column;
+          gap: 10px;
+        }
+      
+        .barra-lateral {
+          max-width: 80%;
+        }
+      
+        .titulo-principal {
+          font-size: 2rem;
+          text-align: center;
+        }
+      
+        .formulario-envio {
+          max-width: 100%;
+        }
+      }
+      
+      /* -------------------------------- */
+      /*        FORMULARIO ENVÍO          */
+      /* -------------------------------- */
+      .contenedor-formulario {
+        display: flex;
+        margin: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: transparent;
+        border: none;
+      }
+      
+      .tarjeta-aliado {
+        flex: 1 1 200px;          /* Todos los contenedores tendrán el mismo tamaño mínimo */
+        max-width: 250px;         /* Tamaño máximo para mantener consistencia */
+        height: 300px;            /* Altura fija para uniformidad */
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        text-align: center;
+        margin: 0;                /* Elimina márgenes adicionales */
+      }
+      
+      .tarjeta-aliado img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .texto-aliado {
+        padding: 10px;
+        font-size: 14px;
+        color: #333;
+      }
+      
+      /* Personalización envío */
+      .tarjeta-envio {
+        max-width: 500px;
+        width: 100%;
+      }
+      
+      .imagen-envio {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      
+      .texto-envio {
+        margin-top: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        background-color: #f3f3f3;
+        padding: 8px 16px;
+        border-radius: 10px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      /* Formulario */
+      .formulario-envio {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 400px;
+        width: 100%;
+      }
+      
+      .formulario-envio label {
+        font-weight: bold;
+        margin-top: 10px;
+        color: #4d4d4d;
+      }
+      
+      .formulario-envio input {
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+        font-size: 16px;
+      }
+      
+      .campo-fijo {
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        color: #333;
+      }
+      
+  /* Aliados comerciales */
+  .contenedor-aliados {
+  display: flex;
+  flex-wrap: wrap;       
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 20px;
+  overflow-x: auto;         /* ✅ Scroll horizontal si no caben */
+}
+
   
-  /* -------------------------------- */
-  /*             NAVBAR               */
-  /* -------------------------------- */
-  .navbar {
-    background-color: #a3e635;
-    height: 70px;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-  }
   
-  .nav-left {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .logo {
-    width: 45px;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 25px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .nav-dropdown {
-    position: relative;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 90%;
-    left: 0;
-    background-color: rgba(154, 237, 90, 0.5);
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 160px;
-  }
-  
-  .dropdown-content a {
-    display: block;
-    color: white;
-    padding: 12px;
-    text-decoration: none;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-  }
-  
-  .nav-dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .nav-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .user-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .user-dropdown {
-    position: relative;
-  }
-  
-  .user-menu {
-    display: none;
-    position: absolute;
-    top: 115%;
-    right: 0;
-    background-color: rgba(154, 237, 90, 0.5);
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 160px;
-  }
-  
-  .user-menu a {
-    color: white;
-    padding: 12px;
-    display: block;
-    text-decoration: none;
-  }
-  
-  .user-menu a:hover {
-    background-color: #f1f1f1;
-    color: black;
-  }
-  
-  .user-menu.show {
-    display: block;
-  }
-  
-  /* -------------------------------- */
-  /*      ENCABEZADO SUPERIOR         */
-  /* -------------------------------- */
-  .encabezado-superior {
-    background: linear-gradient(to bottom, #d0ff88, #a3e635);
-    padding: 10px 0;
+.contenedor-img {
+    height: 80%; /* La imagen ocupará toda la altura de la tarjeta */
+    width: 100%;  /* La imagen ocupará todo el ancho de la tarjeta */
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
   }
   
-  .contenedor-logo-texto {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .logo-superior {
-    width: 55px;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .titulo-principal {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* -------------------------------- */
-  /*        SECCIÓN ALIADOS           */
-  /* -------------------------------- */
-  .seccion-titulo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    background-color: #ccf4b1;
-    padding: 20px 0;
-  }
-  
-  .titulo-principal {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.5rem;
-    color: white;
-    text-shadow: 2px 2px 5px #888;
-    margin: 0;
-  }
-  
-  .barra-lateral {
+  .contenedor-img img {
     width: 100%;
-    max-width: 450px;
-    height: 15px;
-    background: linear-gradient(to bottom, #c1a849, #a48e3b);
-    border-radius: 10px;
-    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  @media (max-width: 600px) {
-    .seccion-titulo {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .barra-lateral {
-      max-width: 80%;
-    }
-  
-    .titulo-principal {
-      font-size: 2rem;
-      text-align: center;
-    }
-  
-    .formulario-envio {
-      max-width: 100%;
-    }
-  }
-  
-  /* -------------------------------- */
-  /*        FORMULARIO ENVÍO          */
-  /* -------------------------------- */
-  .contenedor-formulario {
-    display: flex;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    background-color: transparent;
-    border: none;
-  }
-  
-  .tarjeta-aliado {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    max-width: 250px;
-    text-align: center;
-    margin: 10px;
-  }
-  
-  .tarjeta-aliado img {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Escala la imagen para llenar el contenedor */
   }
   
   .texto-aliado {
-    padding: 10px;
     font-size: 14px;
-    color: #333;
-  }
-  
-  /* Personalización envío */
-  .tarjeta-envio {
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .imagen-envio {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .texto-envio {
-    margin-top: 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: #f3f3f3;
-    padding: 8px 16px;
-    border-radius: 10px;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Formulario */
-  .formulario-envio {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .formulario-envio label {
     font-weight: bold;
     margin-top: 10px;
-    color: #4d4d4d;
-  }
-  
-  .formulario-envio input {
-    border: none;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
-    font-size: 16px;
-  }
-  
-  .campo-fijo {
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
     color: #333;
   }
   
