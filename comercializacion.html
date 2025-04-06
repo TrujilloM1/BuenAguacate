@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Envío - BuenAguacate</title>
+  <link rel="stylesheet" href="styleCOMERCIALIZACION.css" />
+</head>
+<body>
+
+  <!-- Encabezado superior con logo y texto -->
+  <header class="encabezado-superior">
+    <div class="contenedor-logo-texto">
+      <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior" />
+      <h1 class="titulo-principal">BuenAguacate</h1>
+    </div>
+  </header>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="https://i.imgur.com/p1um6vg.png" alt="Logo de BuenAguacate" class="logo" />
+      <a href="#" class="nav-link">Inicio</a>
+      <a href="#" class="nav-link">Productos</a>
+      <a href="#" class="nav-link">Recetas</a>
+      <div class="nav-dropdown">
+        <a href="#" class="nav-link dropdown-btn">Nosotros</a>
+        <div class="dropdown-content">
+          <a href="#">Certificados de Calidad</a>
+          <a href="#">Nuestra Empresa</a>
+          <a href="#">Comercialización</a>
+        </div>
+      </div>
+      <a href="#" class="nav-link">Contacto</a>
+    </div>
+
+    <!-- Menú de usuario -->
+    <div class="nav-right">
+      <div class="user-dropdown">
+        <button class="user-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
+            <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
+            <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
+          </svg>
+        </button>
+        <div class="user-menu">
+          <a href="#">Iniciar Sesión</a>
+          <a href="#">Suscríbete</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Encabezado decorativo -->
+  <div class="seccion-titulo">
+    <div class="barra-lateral"></div>
+    <h2 class="titulo-principal">Seguimiento de Envío</h2>
+    <div class="barra-lateral"></div>
+  </div>
+
+  <!-- Contenido con imagen y formulario -->
+  <div class="contenedor-formulario">
+    
+    <!-- Imagen -->
+    <div class="tarjeta-aliado">
+      <img src="https://i.imgur.com/YhEZmd1.png" alt="Mapa de Envío" />
+      <div class="texto-aliado">¡Tu aguacate va en camino!</div>
+    </div>
+
+    <!-- Formulario -->
+    <form class="formulario-envio">
+      <label for="guia">Número de Guía:</label>
+      <input type="text" id="guia" name="guia" placeholder="Ingrese número de guía" required />
+
+      <label>Nombre del Repartidor:</label>
+      <div class="campo-fijo">Pepito Perez</div>
+
+      <label>Contacto:</label>
+      <div class="campo-fijo">3164066828</div>
+
+      <label>Llegada Estimada:</label>
+      <div class="campo-fijo">27/11/2025 23:45</div>
+    </form>
+  </div>
+
+</body>
+</html>
