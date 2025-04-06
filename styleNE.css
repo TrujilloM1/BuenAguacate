@@ -217,17 +217,17 @@ body {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 20px;
-    gap: 16px;
+    padding: 50px;
+    gap: 20px;
     background-color: #f4f4f4;
 }
 
 .item {
     flex: 0 0 auto;
-    width: 230px;
+    width: 250px;
     background-color: #e6ffcc;
-    border-radius: 12px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 5px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
@@ -271,4 +271,115 @@ body {
     padding: 30px 20px;
     font-size: 1rem;
     line-height: 1.6;
+}
+
+/* Footer*/
+footer {
+    background-color: #7d7d5c;
+    padding: 10px; /* Reduce el padding */
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1600px; /* Reduce el ancho máximo */
+    margin: auto;
+    gap: 20px; /* Reduce el espacio entre elementos */
+    height: fit-content;
+}
+  
+/* Contenedor de los enlaces */
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* Reduce el espacio entre columnas */
+}
+  
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-links li {
+    margin-top: 15px; /* Reduce el margen superior */
+    margin-bottom: 5px; /* Reduce el margen inferior */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+  
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+  
+.footer-links a:hover {
+    color: #d7ffb3;
+}
+  
+/* Branding (nombre de la empresa) */
+.footer-branding {
+    font-size: 1rem; /* Reduce el tamaño de la fuente */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    display: flex;
+    margin-top: -35px; /* Reduce el margen superior */
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    gap: -20px; /* Reduce el espacio entre elementos */
+}
+  
+.footer-branding h3 {
+    font-size: 4rem; /* Reduce el tamaño de la fuente */
+    margin-bottom: -20px; /* Reduce el margen inferior */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.footer-subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 60px; /* Incrementa el margen superior para bajar el botón */
+}
+  
+.footer-subscribe button {
+    background-color: #85f582;
+    color: white;
+    font-size: 2rem; /* Reduce el tamaño de la fuente */
+    padding: 15px 60px; /* Reduce el padding */
+    border-radius: 10px; /* Ajusta el borde redondeado */
+    border: none;
+    text-shadow: 1px 3px 4px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+  
+.footer-subscribe button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
 }
