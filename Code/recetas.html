@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuenAguacate</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BuenAguacate - Recetas</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
 
-    <!-- BARRA DE NAVEGACIÓN -->
+      <!-- Encabezado superior con logo y texto -->
+      <header class="encabezado-superior">
+        <div class="contenedor-logo-texto">
+            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
+            <h1 class="titulo-principal">BuenAguacate</h1>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="nav-left">
-            <img src="LogoBuenaguacate.png" alt="Logo" class="logo"> 
-            <a href="#inicio" class="nav-link">Inicio</a>
-            <a href="#productos" class="nav-link">Productos</a>
-            <a href="#recetas" class="nav-link">Recetas</a>
+            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo de BuenAguacate" class="logo">
+            <a href="#" class="nav-link">Inicio</a>
+            <a href="#" class="nav-link">Productos</a>
+            <a href="#" class="nav-link">Recetas</a>
             <div class="nav-dropdown">
-                <a href="#nosotros" class="nav-link dropdown-btn">Nosotros</a>
+                <a href="#" class="nav-link dropdown-btn">Nosotros</a>
                 <div class="dropdown-content">
-                    <a href="#certificados">Certificados de Calidad</a>
-                    <a href="#empresa">Nuestra Empresa</a>
-                    <a href="#comercializacion">Comercialización</a>
+                    <a href="#">Certificados de Calidad</a>
+                    <a href="#">Nuestra Empresa</a>
+                    <a href="#">Comercialización</a>
                 </div>
             </div>
-            <a href="#contacto" class="nav-link">Contacto</a>
+            <a href="#" class="nav-link">Contacto</a>
         </div>
         
-        <!-- BOTÓN USUARIO -->
+        <!-- Menú de usuario -->
         <div class="nav-right">
             <div class="user-dropdown">
                 <button class="user-btn">
@@ -44,29 +51,39 @@
         </div>
     </nav>
 
-    <!-- SECCIÓN DE RECETAS -->
-    <section id="recetas" class="seccion-recetas">
+    <!-- Sección de Recetas -->
+    <section class="seccion-recetas">
         <h2>Recetas con Aguacate</h2>
         <div class="contenedor-recetas">
+            <!-- Tarjeta 1 -->
             <div class="tarjeta-receta">
-                <img src="imagenes/receta1.jpg" alt="Cestitas rellenas con aguacate">
-                <p>Esta receta de cestitas rellenas es una manera sana y deliciosa de comer aguacate...</p>
+                <img src="https://i.imgur.com/UUYnLAX.png" alt="Cestitas rellenas con aguacate">
+                <p>
+                    Esta receta de cestitas rellenas es una manera sana y deliciosa de comer aguacate. Puedes hacerlos para la cena o como aperitivo en una comida. ¡Además, se tarda poco más de media hora en hacer!
+                </p>
             </div>
+            <!-- Tarjeta 2 -->
             <div class="tarjeta-receta">
-                <img src="imagenes/receta2.jpg" alt="Guacamole con queso">
-                <p>Hay poca gente a la que no le guste el guacamole... esta receta te encantará.</p>
+                <img src="https://i.imgur.com/9g03BfD.png" alt="Guacamole con queso">
+                <p>
+                    Hay poca gente a la que no le guste el guacamole y más este con matices de queso. ¡Está delicioso! Con esta receta acompañada de verduritas, ¡no fallarás!
+                </p>
             </div>
+            <!-- Tarjeta 3 -->
             <div class="tarjeta-receta">
-                <img src="imagenes/receta3.jpg" alt="Sopa de aguacate y almendras">
-                <p>Si no sabes cómo aprovechar algunas almendras, esta receta te encantará...</p>
+                <img src="https://i.imgur.com/5nfze7h.png" alt="Aderezo de aguacate">
+                <p>
+                    Si no sabes cómo aprovechar algunas almendras, esta receta de aguacate te encantará. ¡Nada mejor que algo fresco y original para comer!
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Puedes continuar agregando las otras secciones aquí -->
-    <!-- <section id="productos">...</section> -->
-    <!-- <section id="nosotros">...</section> -->
-    <!-- <section id="contacto">...</section> -->
-
+    <script>
+        // Script para mostrar menú del usuario
+        document.querySelector('.user-btn').addEventListener('click', function () {
+            document.querySelector('.user-menu').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
