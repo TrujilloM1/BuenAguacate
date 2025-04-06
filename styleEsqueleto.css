@@ -55,7 +55,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #a3e635;
+    background-color:  rgb(83, 47, 18);
     height:auto;
     padding: 0 3vw;
     display: flex;
@@ -97,7 +97,7 @@ body {
 }
 
 .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(109, 69, 35);/* Cambia el color de fondo al pasar el mouse */
 }
 
 /* Dropdown */
@@ -110,9 +110,9 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: rgba(154, 237, 90, 0.5);
+    background-color:  rgb(109, 69, 35);
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Sombra para el menú desplegable */
     min-width: 160px;
 }
 
@@ -125,7 +125,7 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);/* Cambia el color de fondo al pasar el mouse */
 }
 
 .nav-dropdown:hover .dropdown-content {
@@ -172,7 +172,7 @@ body {
     position: absolute;
     top: 150%;
     right: 0;
-    background-color: rgba(154, 237, 90, 0.5);
+    background-color: rgb(109, 69, 35);
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 160px;
@@ -187,8 +187,8 @@ body {
 }
 
 .user-menu a:hover {
-    background-color: #f1f1f1;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
 }
 
 .user-menu.show {
@@ -232,7 +232,7 @@ body {
 
 /* Footer---------------------------------------------------------------------------------------------------*/
 footer {
-    background-color: #7d7d5c;
+    background-color: rgb(83, 47, 18);
     padding: 2vw; /* Ajusta el padding relativo al ancho de la pantalla */
     color: white;
     font-family: 'Segoe UI', sans-serif;
@@ -320,7 +320,7 @@ footer {
 }
   
 .footer-subscribe button {
-    background-color: #85f582;
+    background-color: rgb(109, 69, 35);
     color: white;
     font-size: 1.5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
     padding: 1vw 3vw; /* Padding relativo al ancho de la pantalla */
@@ -333,6 +333,7 @@ footer {
     font-style: normal;
     cursor: pointer;
     transition: transform 0.2s;
+    
 }
   
 .footer-subscribe button:hover {
