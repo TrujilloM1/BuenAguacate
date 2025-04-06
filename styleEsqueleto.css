@@ -1,39 +1,38 @@
 /* ENCABEZADO SUPERIOR CON LOGO-------------------------------------------------------------------------------------------- */
 .encabezado-superior {
-    background: linear-gradient(to bottom, #d0ff88, #a3e635);
-    padding: 5px 0;
+    padding: 2vw 0; /* Ajusta el espacio superior e inferior */
+    background-color: #744723; /* Color de fondo del header */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content:center; /* Centra horizontalmente el contenido */
+    height: 10vw; /* Ajusta la altura relativa al ancho de la pantalla */
 }
 
 .contenedor-logo-texto {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1vw;
 }
 
 .logo-superior {
-    width: 65px;
+    width: 10vw;
     height: auto;
     object-fit: contain;
 }
 
 .titulo-principal {
-    font-size: 3.5rem;
+    font-size: 20rem;
     font-family: "Agbalumo", system-ui;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color: white;/* Color del texto */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 /* Adaptabilidad para móviles en el header */
 @media screen and (max-width: 600px) {
     .logo-superior {
-        width: 10vw; /* Reduce el tamaño del logo superior en pantallas pequeñas */
-        height: auto;
+        width: 12vw; /* Reduce el tamaño del logo superior en pantallas pequeñas */
     }
 
     .titulo-principal {
