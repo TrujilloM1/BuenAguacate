@@ -1,50 +1,232 @@
+/* -------------------------------- */
+/*          ESTILOS GENERALES       */
+/* -------------------------------- */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  .galeria-horizontal {
+    background-color: #f4f4f4;
+}
+
+/* -------------------------------- */
+/*             NAVBAR               */
+/* -------------------------------- */
+
+.navbar {
+    background-color: #a3e635;
+    height: 70px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 45px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 25px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background-color: rgba(154, 237, 90, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Botón usuario */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.user-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.user-dropdown {
+    position: relative;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    top: 115%;
+    right: 0;
+    background-color: rgba(154, 237, 90, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+}
+
+.user-menu a {
+    color: white;
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+}
+
+.user-menu a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.user-menu.show {
+    display: block;
+}
+
+
+/* -------------------------------- */
+/*      ENCABEZADO SUPERIOR         */
+/* -------------------------------- */
+
+.encabezado-superior {
+    background: linear-gradient(to bottom, #d0ff88, #a3e635);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contenedor-logo-texto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-superior {
+    width: 55px;
+    height: auto;
+    object-fit: contain;
+}
+
+.titulo-principal {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Adaptabilidad para móviles */
+@media screen and (max-width: 600px) {
+    .titulo-principal {
+        font-size: 1.5rem;
+    }
+
+    .logo-superior {
+        width: 40px;
+    }
+}
+
+
+/* -------------------------------- */
+/*    GALERÍA SCROLL HORIZONTAL     */
+/* -------------------------------- */
+
+.galeria-horizontal {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
     padding: 20px;
     gap: 16px;
     background-color: #f4f4f4;
-  }
-  
-  .item {
+}
+
+.item {
     flex: 0 0 auto;
-    width: 200px;  /* Ancho similar al que marcaste */
+    width: 230px;
+    background-color: #e6ffcc;
+    border-radius: 12px;
+    padding: 10px;
     text-align: center;
-  }
-  
-  .item img {
-    width: 100%;
-    height: 150px;  /* Alto similar al que dibujaste */
-    object-fit: cover;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .item p {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  .texto-largo {
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: scale(1.03);
+}
+
+.item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item p {
+    margin-top: 10px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1rem;
+    color: #3e8e41;
+    font-weight: bold;
+}
+
+/* Scrollbar visible */
+.galeria-horizontal::-webkit-scrollbar {
+    height: 8px;
+}
+
+.galeria-horizontal::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+
+
+/* -------------------------------- */
+/*         TEXTO LARGO FINAL        */
+/* -------------------------------- */
+
+.texto-largo {
     padding: 30px 20px;
     font-size: 1rem;
     line-height: 1.6;
-  }
-  
-  /* Scrollbar visible (opcional) */
-  .galeria-horizontal::-webkit-scrollbar {
-    height: 8px;
-  }
-  .galeria-horizontal::-webkit-scrollbar-thumb {
-    background: #aaa;
-    border-radius: 4px;
-  }
-  
+}
