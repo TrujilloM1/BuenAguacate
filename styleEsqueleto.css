@@ -1,7 +1,7 @@
 /* ENCABEZADO SUPERIOR CON LOGO-------------------------------------------------------------------------------------------- */
 .encabezado-superior {
     padding: 2vw 0; /* Ajusta el espacio superior e inferior */
-    background-color: #744723; /* Color de fondo del header */
+    background-color: #D5FF81; /* Color de fondo del header */
     display: flex;
     align-items: center; /* Centra verticalmente el contenido */
     justify-content:center; /* Centra horizontalmente el contenido */
@@ -21,11 +21,11 @@
 }
 
 .titulo-principal {
-    font-size: 20rem;
+    font-size: 5vw;
     font-family: "Agbalumo", system-ui;
     font-weight: 400;
     font-style: normal;
-    color: white;/* Color del texto */
+    color: rgb(83, 47, 18);/* Color del texto */
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
@@ -119,8 +119,9 @@ body {
 .dropdown-content a {
     display: block;
     color: white;
-    padding: 12px;
+    padding: 0.8vw;
     text-decoration: none;
+    font-size: 1.2vw; /* Ajusta el tamaño del texto de los enlaces */
 }
 
 .dropdown-content a:hover {
@@ -179,9 +180,10 @@ body {
 
 .user-menu a {
     color: white;
-    padding: 12px;
+    padding: 0.8vw;
     display: block;
     text-decoration: none;
+    font-size: 1.2vw; /* Ajusta el tamaño del texto */
 }
 
 .user-menu a:hover {
