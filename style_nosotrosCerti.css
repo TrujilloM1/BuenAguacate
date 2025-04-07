@@ -1,7 +1,8 @@
 
+/* Aqui inicia el encabezado para cada pagina */
 /* ENCABEZADO SUPERIOR CON LOGO */
 .encabezado-superior {
-    background: linear-gradient(to bottom, #d0ff88, #a3e635);
+    background: linear-gradient(to bottom, #D5FF81, #D5FF81);
     padding: 5px 0;
     display: flex;
     justify-content: center;
@@ -39,17 +40,20 @@
         width: 40px;
     }
 }
-/**/
+/* Aqui llega el encabezado para cada pagina */
+
+/* Aqui inicia la barra de navegacion para cada pagina */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    
 }
 
 /* Navbar */
 .navbar {
-    background-color: #a3e635;
+    background-color: #532F12;
     height: 70px;
     padding: 0 10px;
     display: flex;
@@ -68,19 +72,15 @@ body {
 }
 
 /* Logo */
-.logo {
-    width: 45px;
-    height: auto;
-    object-fit: contain;
-}
 
-/* Estilo de los enlaces */
+
+/* Estilo de los enlaces  del drop de nosotros*/
 .nav-link {
     color: #ffffff;
     display: flex;
     text-decoration: none;
-    font-size: 18px;
-    padding:30px 100px;
+    font-size: 16px; /* Reduce el tamaño del texto */
+    padding: 25px 100px; /* Ajusta el padding */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -93,22 +93,23 @@ body {
 .nav-dropdown {
     position: relative;
 }
-
+/*Aqui se ajusta el drop de nosotros*/
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 102%;
     left: 0;
-    background-color: rgba(154, 237, 90, 0.5);
+    background-color: rgba(83, 47, 18, 0.5);
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 160px;
+    min-width: 140px; /* Reduce el ancho mínimo */
 }
 
 .dropdown-content a {
     display: block;
     color: white;
-    padding: 12px;
+    font-size: 16px; /* Reduce el tamaño del texto */
+    padding: 15px 50px; /* Ajusta el padding */
     text-decoration: none;
 }
 
@@ -123,7 +124,7 @@ body {
 /* Botón de usuario */
 .nav-right {
     display: flex;
-    margin-left: 50px;
+    margin-left: 30px; /* Reduce el margen izquierdo */
     align-items: center;
 }
 
@@ -140,33 +141,74 @@ body {
 .user-menu {
     display: none;
     position: absolute;
-    top: 150%;
+    top: 137%;
     right: 0;
-    background-color: rgba(154, 237, 90, 0.5);
+    background-color: rgba(83, 47, 18, 0.5);
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 160px;
+    min-width: 140px; /* Reduce el ancho mínimo */
 }
-
+/* Es para ajustar el drop de usuario*/
 .user-menu a {
     color: white;
-    padding: 12px;
+    font-size: 14px; /* Reduce el tamaño del texto */
+    padding: 12px 40px; /* Ajusta el padding */
     display: block;
     text-decoration: none;
 }
-
+/* drop de usuario*/
 .user-menu a:hover {
-    background-color: #f1f1f1;
-    color: black;
+    background-color: #f1f1f18a;
+    color: rgb(255, 255, 255);
 }
 
 .user-menu.show {
     display: block;
 }
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 5% 8%;
+        gap: 0.5%; /* Reduce el espacio entre elementos */
+    }
+
+    .nav-left, .nav-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5%; /* Reduce el espacio entre elementos */
+    }
+
+    .nav-link {
+        font-size: 0.8rem; /* Reduce el tamaño del texto */
+        padding: 5% 5%; /* Ajusta el padding */
+        text-align: center;
+    }
+
+    .logo {
+        width: 8%; /* Reduce el tamaño del logo */
+        height: auto;
+    }
+    .user-btn {
+        font-size: 0.8rem; /* Reduce el tamaño del texto */
+        padding: 5%; /* Ajusta el padding */
+        border-radius: 5px;
+        width: 8%; /* Reduce el tamaño del botón de usuario */
+        height: auto;
+    }
+    .user-menu {
+        min-width: 80px; /* Reduce el ancho mínimo del menú de usuario */
+    }
+
+}
+/* Aqui finaliza la barra de navegacion para cada pagina */
 
 /* Sección Certificados */
 .seccion-certificados {
-    background-color: #b4f4a4;
+    background-color: #D5FF81;
     padding: 3rem 2rem;
     text-align: center;
 }
@@ -242,9 +284,9 @@ body {
         font-size: 15px;
     }
 }
-/* Footer*/
+/* Footer el style del footer */
 footer {
-    background-color: #7d7d5c;
+    background-color: rgb(83, 47, 18);
     padding: 10px; /* Reduce el padding */
     color: white;
     font-family: 'Segoe UI', sans-serif;
@@ -302,7 +344,7 @@ footer {
 }
   
 .footer-branding h3 {
-    font-size: 4rem; /* Reduce el tamaño de la fuente */
+    font-size: 3.5rem; /* Reduce el tamaño de la fuente */
     margin-bottom: -20px; /* Reduce el margen inferior */
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     font-family: "Agbalumo", system-ui;
@@ -320,10 +362,10 @@ footer {
 }
   
 .footer-subscribe button {
-    background-color: #85f582;
+    background-color: #EFC05C;
     color: white;
-    font-size: 2rem; /* Reduce el tamaño de la fuente */
-    padding: 15px 60px; /* Reduce el padding */
+    font-size: 2.5rem; /* Reduce el tamaño de la fuente */
+    padding: 25px 70px; /* Reduce el padding */
     border-radius: 10px; /* Ajusta el borde redondeado */
     border: none;
     text-shadow: 1px 3px 4px rgba(0,0,0,0.4);
@@ -359,7 +401,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: #B4F3A3;
+    background-color: #D5FF81;
     padding: 20px 0;
   }
   
@@ -369,15 +411,15 @@ footer {
     font-weight: 400;
     font-style: normal;
     color: white;
-    text-shadow: 2px 2px 5px #888;
+    text-shadow: 2px 2px 5px #444444;
     margin: 0;
   }
   
   .barra-lateral {
     width: 100%;
-    max-width: 450px;
+    max-width: 35%;
     height: 15px;
-    background: linear-gradient(to bottom, #c1a849, #a48e3b);
+    background: linear-gradient(to bottom, #532F12, #532F12);
     border-radius: 10px;
     box-shadow: inset 0 3px 6px rgba(0,0,0,0.3); /* Inner shadow */
   }
@@ -388,7 +430,9 @@ footer {
     }
   
     .barra-lateral {
-      max-width: 80%;
+      max-width: 75%;
+      height: 10px;
+
     }
   
     .titulo-principal {
@@ -396,5 +440,6 @@ footer {
       text-align: center;
     }
   }
+  /* hasta aqui va el footer y la barra divisora */
   /*---------------------------------------------*/
   
