@@ -1,0 +1,431 @@
+/* Aqui inicia el encabezado para cada pagina */
+/* ENCABEZADO SUPERIOR CON LOGO */
+.encabezado-superior {
+    background: linear-gradient(to bottom, #D5FF81, #D5FF81);
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contenedor-logo-texto {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-superior {
+    width: 65px;
+    height: auto;
+    object-fit: contain;
+}
+
+.titulo-principal {
+    font-size: 3.5rem;
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Adaptabilidad para móviles */
+@media screen and (max-width: 600px) {
+    .titulo-principal {
+        font-size: 1.5rem;
+    }
+    .logo-superior {
+        width: 40px;
+    }
+}
+/* Aqui llega el encabezado para cada pagina */
+
+/* Aqui inicia la barra de navegacion para cada pagina */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    
+}
+
+/* Navbar */
+.navbar {
+    background-color: #532F12;
+    height: 70px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+/* Enlaces a la izquierda */
+.nav-left {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    flex: 1;
+    gap: 15px;
+}
+
+/* Logo */
+
+
+/* Estilo de los enlaces  del drop de nosotros*/
+.nav-link {
+    color: #ffffff;
+    display: flex;
+    text-decoration: none;
+    font-size: 16px; /* Reduce el tamaño del texto */
+    padding: 25px 100px; /* Ajusta el padding */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown */
+.nav-dropdown {
+    position: relative;
+}
+/*Aqui se ajusta el drop de nosotros*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 102%;
+    left: 0;
+    background-color: rgba(83, 47, 18, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 140px; /* Reduce el ancho mínimo */
+}
+
+.dropdown-content a {
+    display: block;
+    color: white;
+    font-size: 16px; /* Reduce el tamaño del texto */
+    padding: 15px 50px; /* Ajusta el padding */
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Botón de usuario */
+.nav-right {
+    display: flex;
+    margin-left: 30px; /* Reduce el margen izquierdo */
+    align-items: center;
+}
+
+.user-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.user-dropdown {
+    position: relative;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    top: 137%;
+    right: 0;
+    background-color: rgba(83, 47, 18, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 140px; /* Reduce el ancho mínimo */
+}
+/* Es para ajustar el drop de usuario*/
+.user-menu a {
+    color: white;
+    font-size: 14px; /* Reduce el tamaño del texto */
+    padding: 12px 40px; /* Ajusta el padding */
+    display: block;
+    text-decoration: none;
+}
+/* drop de usuario*/
+.user-menu a:hover {
+    background-color: #f1f1f18a;
+    color: rgb(255, 255, 255);
+}
+
+.user-menu.show {
+    display: block;
+}
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 5% 8%;
+        gap: 0.5%; /* Reduce el espacio entre elementos */
+    }
+
+    .nav-left, .nav-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5%; /* Reduce el espacio entre elementos */
+    }
+
+    .nav-link {
+        font-size: 0.8rem; /* Reduce el tamaño del texto */
+        padding: 5% 5%; /* Ajusta el padding */
+        text-align: center;
+    }
+
+    .logo {
+        width: 8%; /* Reduce el tamaño del logo */
+        height: auto;
+    }
+    .user-btn {
+        font-size: 0.8rem; /* Reduce el tamaño del texto */
+        padding: 5%; /* Ajusta el padding */
+        border-radius: 5px;
+        width: 8%; /* Reduce el tamaño del botón de usuario */
+        height: auto;
+    }
+    .user-menu {
+        min-width: 80px; /* Reduce el ancho mínimo del menú de usuario */
+    }
+
+}
+/* Aqui finaliza la barra de navegacion para cada pagina */
+
+
+/* Footer el style del footer */
+footer {
+    background-color: rgb(83, 47, 18);
+    padding: 10px; /* Reduce el padding */
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+  
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1600px; /* Reduce el ancho máximo */
+    margin: auto;
+    gap: 20px; /* Reduce el espacio entre elementos */
+    height: fit-content;
+}
+  
+/* Contenedor de los enlaces */
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* Reduce el espacio entre columnas */
+}
+  
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-links li {
+    margin-top: 15px; /* Reduce el margen superior */
+    margin-bottom: 5px; /* Reduce el margen inferior */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+  
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+  
+.footer-links a:hover {
+    color: #d7ffb3;
+}
+  
+/* Branding (nombre de la empresa) */
+.footer-branding {
+    font-size: 1rem; /* Reduce el tamaño de la fuente */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    display: flex;
+    margin-top: -35px; /* Reduce el margen superior */
+    flex-direction: column;
+    text-align: center;
+    flex: 1;
+    gap: -20px; /* Reduce el espacio entre elementos */
+}
+  
+.footer-branding h3 {
+    font-size: 3.5rem; /* Reduce el tamaño de la fuente */
+    margin-bottom: -20px; /* Reduce el margen inferior */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.footer-subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 60px; /* Incrementa el margen superior para bajar el botón */
+}
+  
+.footer-subscribe button {
+    background-color: #EFC05C;
+    color: white;
+    font-size: 2.5rem; /* Reduce el tamaño de la fuente */
+    padding: 25px 70px; /* Reduce el padding */
+    border-radius: 10px; /* Ajusta el borde redondeado */
+    border: none;
+    text-shadow: 1px 3px 4px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+  
+.footer-subscribe button:hover {
+    transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+/* Barra divisora */
+.seccion-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: #D5FF81;
+    padding: 20px 0;
+  }
+  
+  .tituloBarra {
+    font-size: 2.5rem;
+    font-family: "Agbalumo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-shadow: 2px 2px 5px #444444;
+    margin: 0;
+  }
+  
+  .barra-lateral {
+    width: 100%;
+    max-width: 35%;
+    height: 15px;
+    background: linear-gradient(to bottom, #532F12, #532F12);
+    border-radius: 10px;
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.3); /* Inner shadow */
+  }
+  @media (max-width: 600px) {
+    .seccion-titulo {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .barra-lateral {
+      max-width: 75%;
+      height: 10px;
+
+    }
+  
+    .titulo-principal {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+  /* hasta aqui va el footer y la barra divisora */
+  /*---------------------------------------------*/
+
+  /* -------------------------------- */
+/*    GALERÍA SCROLL HORIZONTAL     */
+/* -------------------------------- */
+
+.galeria-horizontal {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 50px;
+    gap: 20px;
+    background-color: #D5FF81;
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 250px;
+    background-color: #e6ffcc;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.item:hover {
+    transform: scale(1.03);
+}
+
+.item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item p {
+    margin-top: 10px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1rem;
+    color: #3e8e41;
+    font-weight: bold;
+}
+
+/* Scrollbar visible */
+.galeria-horizontal::-webkit-scrollbar {
+    height: 8px;
+}
+
+.galeria-horizontal::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+
+
+/* -------------------------------- */
+/*         TEXTO LARGO FINAL        */
+/* -------------------------------- */
+
+.texto-largo {
+    background-color: #D5FF81;
+    padding: 30px 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
