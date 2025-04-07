@@ -1,0 +1,170 @@
+<!-- Aqui inicia lo que deben pegar en sus codigos para el header, footer y barra divisora -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BuenAguacate - Recetas</title>
+        <link rel="stylesheet" href="styleCOMERCIALIZACION.css">
+        <script src="scriptCOMERCIALIZACION.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+      <!-- Encabezado superior con logo y texto -->
+      <header class="encabezado-superior">
+        <div class="contenedor-logo-texto">
+            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
+            <h1 class="titulo-principal">BuenAguacate</h1>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+      <div class="nav-left">
+          
+          <a href="paginaprincipal.html" class="nav-link">Inicio</a>
+          <a href="productos.html" class="nav-link">Productos</a>
+          <a href="recetas.html" class="nav-link">Recetas</a>
+          <div class="nav-dropdown">
+              <a href="#" class="nav-link dropdown-btn">Nosotros</a>
+              <div class="dropdown-content">
+                  <a href="nosotros_certificados.html">Certificados de Calidad</a>
+                  <a href="nuestraempresa.html">Nuestra Empresa</a>
+                  <a href="comercializacion.html">Comercialización</a>
+              </div>
+          </div>
+          <a href="contactanos.html" class="nav-link">Contacto</a>
+      </div>
+        
+        <!-- Menú de usuario -->
+        <div class="nav-right">
+            <div class="user-dropdown">
+                <button class="user-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
+                        <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
+                        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </button>
+                <div class="user-menu">
+                    <a href="#">Iniciar Sesión</a>
+                    <a href="#">Suscríbete</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <!-- Encabezado decorativo de la sección -->
+        <div class="seccion-titulo">
+            <div class="barra-lateral"></div>
+            <h2 class="tituloBarra">Recetas</h2>
+            <div class="barra-lateral"></div>
+          </div>
+<!-- Contenido con imagen y formulario -->
+<div class="contenedor-formulario">
+  
+  <!-- Imagen -->
+  <div class="tarjeta-aliado tarjeta-envio">
+    <img src="https://i.imgur.com/LkclPdU.jpeg" alt="Mapa de Envío" class="imagen-envio" />
+    <div class="texto-aliado texto-envio">¡Tu aguacate va en camino!</div>
+  </div>
+
+  <!-- Formulario -->
+  <form class="formulario-envio">
+    <label for="guia">Número de Guía:</label>
+    <input type="text" id="guia" name="guia" placeholder="Ingrese número de guía" required />
+
+    <label>Nombre del Repartidor:</label>
+    <div class="campo-fijo">Cami Trujillo</div>
+
+    <label>Contacto:</label>
+    <div class="campo-fijo">3164066828</div>
+
+    <label>Llegada Estimada:</label>
+    <div class="campo-fijo">27/11/2025 23:45</div>
+  </form>
+</div>
+
+
+<!-- Sección de Aliados -->
+<div class="contenedor-aliados">
+  <div class="tarjeta-aliado">
+    <div class="contenedor-img">
+      <img src="https://i.imgur.com/GenU3f7.jpeg" alt="Éxito" />
+    </div>
+    <div class="texto-aliado">ÉXITO</div>
+  </div>
+  <div class="tarjeta-aliado">
+    <div class="contenedor-img">
+      <img src="https://i.imgur.com/hCL2A0j.jpeg" alt="Carulla" />
+    </div>
+    <div class="texto-aliado">CARULLA</div>
+  </div>
+  <div class="tarjeta-aliado">
+    <div class="contenedor-img">
+      <img src="https://i.imgur.com/FyoAwow.jpeg" alt="Colsubsidio" />
+    </div>
+    <div class="texto-aliado">COLSUBSIDIO</div>
+  </div>
+</div>
+
+
+  <!-- Aliados  -->
+  <div class="contenedor-aliados">
+  <div class="tarjeta-aliado">
+      <div class="contenedor-img">
+        <img src="https://i.imgur.com/QzF3plM.jpeg" alt="HASS Fruits" />
+      </div>
+      <div class="texto-aliado">HASS FRUITS</div>
+    </div>
+    
+    <div class="tarjeta-aliado">
+      <div class="contenedor-img">
+        <img src="https://i.imgur.com/UjP3sT0.jpeg" alt="Corabastos" />
+      </div>
+      <div class="texto-aliado">CORABASTOS</div>
+    </div>
+    
+    <div class="tarjeta-aliado">
+      <div class="contenedor-img">
+        <img src="https://i.imgur.com/8lheR8r.jpeg" alt="Agricultores" />
+      </div>
+      <div class="texto-aliado">AGRICULTORES</div>
+    </div>
+  </div>
+
+   <!-- Aqui inicia el footer -->
+   <footer>
+    <div class="footer-container">
+      
+      <!-- Bloque de enlaces organizados en dos columnas -->
+      <div class="footer-links">
+          <ul>
+            <li><a href="paginaprincipal.html">Inicio</a></li>
+            <li><a href="nosotros_certificados.html">Certificados de Calidad</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="nuestraempresa.html">Nuestra Empresa</a></li>
+          </ul>
+          <ul>
+            <li><a href="recetas.html">Recetas</a></li>
+            <li><a href="comercializacion.html">Comercialización</a></li>
+            <li><a href="contactenos.html">Contacto</a></li>
+          </ul>
+        </div>
+    
+        <!-- Otros bloques del footer -->
+        <div class="footer-branding">
+          <h3>BuenAguacate</h3>
+          <p>Empresa Colombiana de Aguacates</p>
+        </div>
+    
+        <div class="footer-subscribe">
+          <button id="boton-suscribirse">Suscríbete</button>
+        </div>
+    
+      </div>
+    </footer>
+       <!-- Hasta aqui va el footer -->
+      </body>
+      </html>
