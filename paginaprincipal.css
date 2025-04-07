@@ -52,6 +52,10 @@ body {
 
 /* Navbar */
 .navbar {
+
+  position: relative; /* o absolute si es necesario */
+  z-index: 10; /* Un valor alto para que esté sobre las imágenes */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar */
   background-color: #532F12;
   height: 70px;
   padding: 0 10px;
@@ -59,6 +63,14 @@ body {
   justify-content: space-between;
   grid-template-columns: 1fr auto;
   align-items: center;
+}
+
+/* Menús desplegables */
+.navbar .dropdown-menu {
+  position: absolute;
+  z-index: 11; /* Asegúrate de que los menús estén sobre la barra de navegación */
+  background-color: #fff; /* Fondo para que no se mezclen con las imágenes */
+  border: 1px solid #ddd; /* Opcional: borde para distinguirlos */
 }
 
 /* Enlaces a la izquierda */

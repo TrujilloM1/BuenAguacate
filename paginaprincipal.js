@@ -13,20 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
             userMenu.classList.remove('show');
         }
     });
-});
-const imagenes = [
-    "https://i.imgur.com/bboNtNz.jpeg",
-    "https://i.imgur.com/WkMRy5R.png",
-    "https://i.imgur.com/2uoELeb.jpeg",
-    "https://i.imgur.com/3AC3TJw.jpeg",
-    "https://i.imgur.com/LVUhEfS.jpeg",
-    "https://i.imgur.com/fOklekx.jpeg"
 
-  ];
-  let indice = 0;
-  
-  function cambiarImagen(direccion) {
-    indice = (indice + direccion + imagenes.length) % imagenes.length;
-    document.getElementById("imagen-hero").src = imagenes[indice];
-  }
+const imagenes = [
+  "https://i.imgur.com/bboNtNz.jpeg",
+  "https://i.imgur.com/WkMRy5R.png",
+  "https://i.imgur.com/2uoELeb.jpeg",
+  "https://i.imgur.com/3AC3TJw.jpeg",
+  "https://i.imgur.com/LVUhEfS.jpeg",
+  "https://i.imgur.com/fOklekx.jpeg"
+
+];
+let indice = 0;
+
+function cambiarImagen(direccion) {
+  indice = (indice + direccion + imagenes.length) % imagenes.length;
+  document.getElementById("imagen-hero").src = imagenes[indice];
+}
+
+
+});
+
   
