@@ -1,0 +1,135 @@
+<!-- Aqui inicia lo que deben pegar en sus codigos para el header, footer y barra divisora -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BuenAguacate - Recetas</title>
+        <link rel="stylesheet" href="estiloproductos.css">
+        <script src="funcionesproductos.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+      <!-- Encabezado superior con logo y texto -->
+      <header class="encabezado-superior">
+        <div class="contenedor-logo-texto">
+            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
+            <h1 class="titulo-principal">BuenAguacate</h1>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+      <div class="nav-left">
+          
+          <a href="paginaprincipal.html" class="nav-link">Inicio</a>
+          <a href="productos.html" class="nav-link">Productos</a>
+          <a href="recetas.html" class="nav-link">Recetas</a>
+          <div class="nav-dropdown">
+              <a href="#" class="nav-link dropdown-btn">Nosotros</a>
+              <div class="dropdown-content">
+                  <a href="nosotros_certificados.html">Certificados de Calidad</a>
+                  <a href="nuestraempresa.html">Nuestra Empresa</a>
+                  <a href="comercializacion.html">Comercialización</a>
+              </div>
+          </div>
+          <a href="contactanos.html" class="nav-link">Contacto</a>
+        </div>
+        
+        <!-- Menú de usuario -->
+        <div class="nav-right">
+            <div class="user-dropdown">
+                <button class="user-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
+                        <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
+                        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </button>
+                <div class="user-menu">
+                    <a href="#">Iniciar Sesión</a>
+                    <a href="#">Suscríbete</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <!-- Encabezado decorativo de la sección -->
+        <div class="seccion-titulo">
+            <div class="barra-lateral"></div>
+            <h2 class="tituloBarra">Recetas</h2>
+            <div class="barra-lateral"></div>
+          </div>
+          <section class="contenedor-productos">
+            <div class="tarjeta">
+              <img src="https://i.imgur.com/yS6M5l7.jpeg" alt="Aguacate Hass Jumbo">
+              <h3>AGUACATE HASS<br><span>JUMBO</span></h3>
+              <p>+230 gr<br>$ 25.000 kg</p>
+            </div>
+        
+            <div class="tarjeta">
+              <img src="https://i.imgur.com/JujfgR4.jpeg" alt="Aguacate Hass Primera">
+              <h3>AGUACATE HASS<br><span>PRIMERA</span></h3>
+              <p>170 gr a 229 gr<br>$ 20.000 kg</p>
+            </div>
+        
+            <div class="tarjeta">
+              <img src="https://i.imgur.com/XDpYbbX.jpeg" alt="Aguacate Hass Segunda">
+              <h3>AGUACATE HASS<br><span>SEGUNDA</span></h3>
+              <p>130 gr a 169 gr<br>$ 15.000 kg</p>
+            </div>
+        
+            <div class="tarjeta">
+              <img src="https://i.imgur.com/997a4jr.png" alt="Aguacate Hass Segunda">
+              <h3>AGUACATE HASS<br><span>TERCERA</span></h3>
+              <p>-129 gr<br>$ 10.000 kg</p>
+            </div>
+        
+            <div class="tarjeta">
+              <img src="https://i.imgur.com/xcASE9U.png" alt="Aguacate Hass Segunda">
+              <h3>GUACAMOLE<br><span>HASS</span></h3>
+              <p>100gr<br>$  5.000</p>
+            </div>
+        
+            <div class="tarjeta">
+              <img src="https://i.imgur.com/7fXRR1u.png" alt="Aguacate Hass Segunda">
+              <h3>ACEITE<br><span>DE AGUACATE</span></h3>
+              <p>50ml<br>$  50.000</p>
+            </div>
+        
+          </section>
+   <!-- Aqui inicia el footer -->
+   <footer>
+    <div class="footer-container">
+      
+      <!-- Bloque de enlaces organizados en dos columnas -->
+      <div class="footer-links">
+        <ul>
+          <li><a href="paginaprincipal.html">Inicio</a></li>
+          <li><a href="nosotros_certificados.html">Certificados de Calidad</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nuestraempresa.html">Nuestra Empresa</a></li>
+        </ul>
+        <ul>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="comercializacion.html">Comercialización</a></li>
+          <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+      </div>
+  
+      <!-- Otros bloques del footer -->
+      <div class="footer-branding">
+        <h3>BuenAguacate</h3>
+        <p>Empresa Colombiana de Aguacates</p>
+      </div>
+  
+      <div class="footer-subscribe">
+        <button id="boton-suscribirse">Suscríbete</button>
+      </div>
+  
+    </div>
+  </footer>
+       <!-- Hasta aqui va el footer -->
+</body>
+</html>
