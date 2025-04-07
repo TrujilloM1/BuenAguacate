@@ -1,0 +1,153 @@
+<!-- Aqui inicia lo que deben pegar en sus codigos para el header, footer y barra divisora -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BuenAguacate - contacto</title>
+        <link rel="stylesheet" href="estilocontacto.css">
+        <script src="funcionescontacto.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+      <!-- Encabezado superior con logo y texto -->
+      <header class="encabezado-superior">
+        <div class="contenedor-logo-texto">
+            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
+            <h1 class="titulo-principal">BuenAguacate</h1>
+        </div>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+      <div class="nav-left">
+          
+          <a href="paginaprincipal.html" class="nav-link">Inicio</a>
+          <a href="productos.html" class="nav-link">Productos</a>
+          <a href="recetas.html" class="nav-link">Recetas</a>
+          <div class="nav-dropdown">
+              <a href="#" class="nav-link dropdown-btn">Nosotros</a>
+              <div class="dropdown-content">
+                  <a href="nosotros_certificados.html">Certificados de Calidad</a>
+                  <a href="nuestraempresa.html">Nuestra Empresa</a>
+                  <a href="comercializacion.html">Comercialización</a>
+              </div>
+          </div>
+          <a href="contactanos.html" class="nav-link">Contacto</a>
+      </div>
+        
+        <!-- Menú de usuario -->
+        <div class="nav-right">
+            <div class="user-dropdown">
+                <button class="user-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
+                        <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
+                        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </button>
+                <div class="user-menu">
+                    <a href="#">Iniciar Sesión</a>
+                    <a href="#">Suscríbete</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <!-- Encabezado decorativo de la sección -->
+        <div class="seccion-titulo">
+            <div class="barra-lateral"></div>
+            <h2 class="tituloBarra">Contactanos</h2>
+            <div class="barra-lateral"></div>
+          </div>
+            <!-- Hasta aqui llega el codigo que deben pegar en sus codigos aqui abajo va el contenido de cada pagina -->
+
+ 
+      <form class="formulario-grid" id="formularioContacto">
+        <div class="columna-izquierda">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" required />
+  
+          <label for="correo">Correo:</label>
+          <input type="email" id="correo" required />
+  
+          <label for="numero">Número:</label>
+          <input type="tel" id="numero" required />
+  
+          <label for="asunto">Asunto:</label>
+          <input type="text" id="asunto" required />
+        </div>
+  
+        <div class="columna-derecha">
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" rows="7" required></textarea>
+        </div>
+  
+        <div class="boton-centro">
+          <button type="submit" class="boton-enviar-contacto">Enviar</button>
+        </div>
+      </form>
+  
+    <!-- Íconos de contacto  -->
+        <div class="contenedor-iconos-contacto">
+          <div class="iconos-contacto">
+            <a href="https://wa.me/1234567890" target="_blank">
+              <img src="https://i.imgur.com/ebLZXpR.png" alt="WhatsApp" />
+            </a>
+            <a id="iconoChat">
+              <img src="https://i.imgur.com/s0hTHm1.png" alt="Chat" />
+            </a>
+          </div>
+        </div>
+        
+        
+      </div>
+    </section>
+  
+    <!-- Chat en Vivo -->
+    <div class="chatbot">
+      <div class="chat-header" onclick="toggleChat()">
+        💬 ¿Necesitas ayuda?
+      </div>
+      <div class="chat-body" id="chatBody">
+        <div class="chat-mensajes" id="chatMensajes"></div>
+        <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." onkeydown="if(event.key === 'Enter') enviarMensaje()">
+      </div>
+    </div>
+<!-- Aqui inicia el footer -->
+<footer>
+  <div class="footer-container">
+    
+    <!-- Bloque de enlaces organizados en dos columnas -->
+    <div class="footer-links">
+        <ul>
+          <li><a href="paginaprincipal.html">Inicio</a></li>
+          <li><a href="nosotros_certificados.html">Certificados de Calidad</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nuestraempresa.html">Nuestra Empresa</a></li>
+        </ul>
+        <ul>
+          <li><a href="recetas.html">Recetas</a></li>
+          <li><a href="comercializacion.html">Comercialización</a></li>
+          <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+      </div>
+  
+      <!-- Otros bloques del footer -->
+      <div class="footer-branding">
+        <h3>BuenAguacate</h3>
+        <p>Empresa Colombiana de Aguacates</p>
+      </div>
+  
+      <div class="footer-subscribe">
+        <button id="boton-suscribirse">Suscríbete</button>
+      </div>
+  
+    </div>
+  </footer>
+ <!-- Hasta aqui va el footer -->
+
+</body>
+</html>
+
