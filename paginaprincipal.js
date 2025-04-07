@@ -15,12 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 const imagenes = [
-    "img/aguacate1.jpeg",
-    "img/aguacate2.jpeg",
-    "img/aguacate3.jpeg",
-    "img/aguacate4.jpeg",
-    "img/aguacate5.jpeg",
-    "img/aguacate6.jpeg"
+    "https://i.imgur.com/bboNtNz.jpeg",
+    "https://i.imgur.com/WkMRy5R.png",
+    "https://i.imgur.com/2uoELeb.jpeg",
+    "https://i.imgur.com/3AC3TJw.jpeg",
+    "https://i.imgur.com/LVUhEfS.jpeg",
+    "https://i.imgur.com/fOklekx.jpeg"
 
   ];
   let indice = 0;
