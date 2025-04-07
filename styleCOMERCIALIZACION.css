@@ -1,131 +1,119 @@
-/* ENCABEZADO SUPERIOR CON LOGO-------------------------------------------------------------------------------------------- */
+/* Aqui inicia el encabezado para cada pagina */
+/* ENCABEZADO SUPERIOR CON LOGO */
 .encabezado-superior {
-  padding: 2vw 0; /* Ajusta el espacio superior e inferior */
-  background-color: #D5FF81; /* Color de fondo del header */
+  background: linear-gradient(to bottom, #D5FF81, #D5FF81);
+  padding: 5px 0;
   display: flex;
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content:center; /* Centra horizontalmente el contenido */
-  height: 10vw; /* Ajusta la altura relativa al ancho de la pantalla */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .contenedor-logo-texto {
   display: flex;
   align-items: center;
-  gap: 1vw;
+  gap: 15px;
 }
 
 .logo-superior {
-  width: 10vw;
+  width: 65px;
   height: auto;
   object-fit: contain;
 }
 
 .titulo-principal {
-  font-size: 5vw;
+  font-size: 3.5rem;
   font-family: "Agbalumo", system-ui;
   font-weight: 400;
   font-style: normal;
-  color: rgb(83, 47, 18);/* Color del texto */
+  color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
-/* Adaptabilidad para móviles en el header */
+/* Adaptabilidad para móviles */
 @media screen and (max-width: 600px) {
-  .logo-superior {
-      width: 12vw; /* Reduce el tamaño del logo superior en pantallas pequeñas */
-  }
-
   .titulo-principal {
-      font-size: 2.5rem; /* Reduce el tamaño del título principal */
-      text-align: center; /* Asegura que el texto esté centrado */
+      font-size: 1.5rem;
   }
-
-  .encabezado-superior {
-      padding: 2vw 0; /* Reduce el padding del encabezado */
+  .logo-superior {
+      width: 40px;
   }
 }
-/* BARRA DE NAVEGACION------------------------------------------------------------------------------------------------------*/
+/* Aqui llega el encabezado para cada pagina */
 
+/* Aqui inicia la barra de navegacion para cada pagina */
 body {
-  background-color: #D5FF81; /* Cambia este color al que desees */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #D5FF81;
+  
 }
 
 /* Navbar */
 .navbar {
-  background-color:  rgb(83, 47, 18);
-  height:auto;
-  padding: 0 3vw;
+  background-color: #532F12;
+  height: 70px;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
-  grid-template-columns: 1fr auto;/* Asegura que el logo y los enlaces ocupen el espacio disponible */
+  grid-template-columns: 1fr auto;
   align-items: center;
-  overflow-x: hidden; /* Activa el scroll horizontal si el contenido excede el ancho */
-  white-space: nowrap; /* Evita que los elementos se envuelvan en varias líneas */
-  overflow:visible; /* Asegúrate de que no recorte contenido */
-
 }
 
 /* Enlaces a la izquierda */
 .nav-left {
   display: flex;
-  align-items:center;
+  align-items: space-between;
   justify-content: space-between;
   flex: 1;
-  gap: 2vw;
+  gap: 15px;
 }
 
 /* Logo */
-.logo {
-  width: 4vw; /* Tamaño relativo al ancho de la pantalla */
-  height: auto;
-  object-fit: contain; /* Mantiene las proporciones de la imagen */
-  max-width: 12vw; /* Limita el tamaño máximo del logo */
-}
 
-/* Estilo de los enlaces */
+
+/* Estilo de los enlaces  del drop de nosotros*/
 .nav-link {
   color: #ffffff;
   display: flex;
   text-decoration: none;
-  font-size: 1.5vw;
-  padding:1vw 2vw;
+  font-size: 16px; /* Reduce el tamaño del texto */
+  padding: 25px 100px; /* Ajusta el padding */
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: rgb(109, 69, 35);/* Cambia el color de fondo al pasar el mouse */
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Dropdown */
 .nav-dropdown {
   position: relative;
 }
-
+/*Aqui se ajusta el drop de nosotros*/
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 102%;
   left: 0;
-  background-color:  rgb(109, 69, 35);
+  background-color: rgba(83, 47, 18, 0.5);
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Sombra para el menú desplegable */
-  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 140px; /* Reduce el ancho mínimo */
 }
 
 .dropdown-content a {
   display: block;
   color: white;
-  padding: 0.8vw;
+  font-size: 16px; /* Reduce el tamaño del texto */
+  padding: 15px 50px; /* Ajusta el padding */
   text-decoration: none;
-  font-size: 1.2vw; /* Ajusta el tamaño del texto de los enlaces */
 }
 
 .dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.3);/* Cambia el color de fondo al pasar el mouse */
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .nav-dropdown:hover .dropdown-content {
@@ -135,32 +123,14 @@ body {
 /* Botón de usuario */
 .nav-right {
   display: flex;
-  margin-left: 50px;
+  margin-left: 30px; /* Reduce el margen izquierdo */
   align-items: center;
-  justify-content: flex-end; /* Asegura que el ícono esté alineado a la derecha */
-  overflow: visible; /* Evita que el contenido se recorte */
-  z-index: 10; /* Asegura que esté por encima de otros elementos */
-
 }
 
 .user-btn {
-  width: 3vw; /* Ajusta el ancho del botón */
-  height: 3vw; /* Ajusta la altura del botón */
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: none;
   border: none;
   cursor: pointer;
-  position: relative;
-  z-index: 10; /* Asegura que esté por encima de otros elementos */
-}
-
-.user-btn img {
-  width: 100%; /* La imagen ocupará todo el ancho del botón */
-  height: 100%; /* La imagen ocupará toda la altura del botón */
-  object-fit: contain; /* Mantiene las proporciones de la imagen */
-  display: block; /* Elimina cualquier espacio extra alrededor de la imagen */
 }
 
 .user-dropdown {
@@ -170,73 +140,78 @@ body {
 .user-menu {
   display: none;
   position: absolute;
-  top: 150%;
+  top: 137%;
   right: 0;
-  background-color: rgb(109, 69, 35);
+  background-color: rgba(83, 47, 18, 0.5);
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: 160px;
+  min-width: 140px; /* Reduce el ancho mínimo */
 }
-
+/* Es para ajustar el drop de usuario*/
 .user-menu a {
   color: white;
-  padding: 0.8vw;
+  font-size: 14px; /* Reduce el tamaño del texto */
+  padding: 12px 40px; /* Ajusta el padding */
   display: block;
   text-decoration: none;
-  font-size: 1.2vw; /* Ajusta el tamaño del texto */
 }
-
+/* drop de usuario*/
 .user-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #f1f1f18a;
   color: rgb(255, 255, 255);
 }
 
 .user-menu.show {
   display: block;
 }
-
-/* Adaptabilidad para móviles en la barra de navegación */
-@media screen and (max-width: 600px) {
-  .logo {
-      width: 10vw; /* Reduce el tamaño del logo en pantallas pequeñas */
-      max-width: 10vw; /* Limita el tamaño máximo */
-  }
-
-  .user-btn {
-      width: 10vw; /* Igual al tamaño del logo en pantallas pequeñas */
-      max-width: 10vw; /* Limita el tamaño máximo */
-  }
-
-  .user-btn img {
-      width: 100%; /* Asegura que la imagen ocupe todo el espacio del botón */
-      height: 100%;
-  }
-
+@media (max-width: 600px) {
   .navbar {
-      padding: 0 2vw; /* Reduce el padding de la barra de navegación */
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      padding: 5% 8%;
+      gap: 0.5%; /* Reduce el espacio entre elementos */
   }
 
-  .nav-right {
-      margin-left: 0; /* Ajusta el margen para que no se desplace fuera de la pantalla */
+  .nav-left, .nav-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5%; /* Reduce el espacio entre elementos */
   }
 
   .nav-link {
-      font-size: 3vw; /* Aumenta el tamaño de la fuente de los enlaces */
-      padding: 1vw 1.5vw; /* Reduce el padding de los enlaces */
+      font-size: 0.8rem; /* Reduce el tamaño del texto */
+      padding: 5% 5%; /* Ajusta el padding */
+      text-align: center;
   }
+
+  .logo {
+      width: 8%; /* Reduce el tamaño del logo */
+      height: auto;
+  }
+  .user-btn {
+      font-size: 0.8rem; /* Reduce el tamaño del texto */
+      padding: 5%; /* Ajusta el padding */
+      border-radius: 5px;
+      width: 8%; /* Reduce el tamaño del botón de usuario */
+      height: auto;
+  }
+  .user-menu {
+      min-width: 80px; /* Reduce el ancho mínimo del menú de usuario */
+  }
+
 }
+/* Aqui finaliza la barra de navegacion para cada pagina */
 
 
-
-
-
-/* Footer---------------------------------------------------------------------------------------------------*/
+/* Footer el style del footer */
 footer {
   background-color: rgb(83, 47, 18);
-  padding: 2vw; /* Ajusta el padding relativo al ancho de la pantalla */
+  padding: 10px; /* Reduce el padding */
   color: white;
   font-family: 'Segoe UI', sans-serif;
-  text-align: center;
 }
 
 .footer-container {
@@ -244,9 +219,9 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 100%; /* Reduce el ancho máximo */
+  max-width: 1600px; /* Reduce el ancho máximo */
   margin: auto;
-  gap: 2vw; /* Reduce el espacio entre elementos */
+  gap: 20px; /* Reduce el espacio entre elementos */
   height: fit-content;
 }
 
@@ -254,24 +229,23 @@ footer {
 .footer-links {
   display: flex;
   flex-direction: row;
-  gap: 3vw; /* Reduce el espacio entre columnas */
+  gap: 40px; /* Reduce el espacio entre columnas */
 }
 
 .footer-links ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
 .footer-links li {
-  margin: 1vw 0; /* Margen vertical relativo al ancho de la pantalla */
+  margin-top: 15px; /* Reduce el margen superior */
+  margin-bottom: 5px; /* Reduce el margen inferior */
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .footer-links a {
   text-decoration: none;
   color: white;
-  font-size: 1.2vw; /* Tamaño de fuente relativo al ancho de la pantalla */
   transition: color 0.3s;
 }
 
@@ -281,33 +255,23 @@ footer {
 
 /* Branding (nombre de la empresa) */
 .footer-branding {
-  font-size: 1.5vw; /* Tamaño del texto relativo al ancho de la pantalla */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 1rem; /* Reduce el tamaño de la fuente */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   display: flex;
-  flex-direction: column; /* Asegura que los elementos estén en columna */
-  justify-content: center; /* Centra verticalmente los elementos */
-  align-items: center; /* Centra horizontalmente los elementos */
+  margin-top: -35px; /* Reduce el margen superior */
+  flex-direction: column;
   text-align: center;
   flex: 1;
-  gap: 0.5vw; /* Ajusta el espacio entre "BuenAguacate" y "Empresa Colombiana de Aguacates" */
-  height: 100%; /* Asegura que ocupe todo el espacio disponible */
-  margin: 0; /* Elimina márgenes adicionales */
-  padding: 1vw 0; /* Agrega un padding uniforme arriba y abajo */
+  gap: -20px; /* Reduce el espacio entre elementos */
 }
 
 .footer-branding h3 {
-  font-size: 5vw; /* Tamaño del título relativo al ancho de la pantalla */
-  margin: 0.5vw 0; /* Ajusta el margen superior e inferior */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 3.5rem; /* Reduce el tamaño de la fuente */
+  margin-bottom: -20px; /* Reduce el margen inferior */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   font-family: "Agbalumo", system-ui;
   font-weight: 400;
   font-style: normal;
-}
-
-.footer-branding p {
-  font-size: 1.2vw; /* Tamaño del texto relativo al ancho de la pantalla */
-  margin: 0.5vw 0; /* Ajusta el margen superior e inferior */
-  color: white;
 }
 
 .footer-subscribe {
@@ -320,20 +284,19 @@ footer {
 }
 
 .footer-subscribe button {
-  background-color: rgb(109, 69, 35);
+  background-color: #EFC05C;
   color: white;
-  font-size: 1.5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
-  padding: 1vw 3vw; /* Padding relativo al ancho de la pantalla */
-  border-radius: 1vw; /* Bordes redondeados relativos al ancho de la pantalla */
+  font-size: 2.5rem; /* Reduce el tamaño de la fuente */
+  padding: 25px 70px; /* Reduce el padding */
+  border-radius: 10px; /* Ajusta el borde redondeado */
   border: none;
   text-shadow: 1px 3px 4px rgba(0,0,0,0.4);
-  box-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.3); /* Sombra relativa al ancho de la pantalla */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   font-family: "Agbalumo", system-ui;
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
   transition: transform 0.2s;
-  
 }
 
 .footer-subscribe button:hover {
@@ -343,30 +306,16 @@ footer {
 /* Responsivo */
 @media (max-width: 768px) {
   .footer-container {
-      flex-direction: column; /* Cambia a una sola columna en pantallas pequeñas */
-      align-items: center;
-      text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-links {
-      flex-direction: column; /* Cambia los enlaces a una sola columna */
-      align-items: center;
-      gap: 2vw; /* Ajusta el espacio entre los enlaces */
-  }
-
-  .footer-branding {
-      font-size: 2vw; /* Ajusta el tamaño del texto en pantallas pequeñas */
-  }
-
-  .footer-subscribe button {
-      font-size: 2vw; /* Ajusta el tamaño del botón en pantallas pequeñas */
-      padding: 1.5vw 4vw; /* Ajusta el padding del botón */
+    flex-direction: column;
+    align-items: center;
   }
 }
-
-/* -------------------------------- */
-/*          decorativo              */
-/* -------------------------------- */
 
 /* Barra divisora */
 .seccion-titulo {
@@ -384,15 +333,15 @@ footer {
   font-weight: 400;
   font-style: normal;
   color: white;
-  text-shadow: 2px 2px 5px #888;
+  text-shadow: 2px 2px 5px #444444;
   margin: 0;
 }
 
 .barra-lateral {
   width: 100%;
-  max-width: 450px;
+  max-width: 35%;
   height: 15px;
-  background: linear-gradient(to bottom, #c1a849, #a48e3b);
+  background: linear-gradient(to bottom, #532F12, #532F12);
   border-radius: 10px;
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.3); /* Inner shadow */
 }
@@ -403,7 +352,9 @@ footer {
   }
 
   .barra-lateral {
-    max-width: 80%;
+    max-width: 75%;
+    height: 10px;
+
   }
 
   .titulo-principal {
@@ -411,38 +362,42 @@ footer {
     text-align: center;
   }
 }
-
+/* hasta aqui va el footer y la barra divisora */
+/*---------------------------------------------*/
 
 
 /* -------------------------------- */
 /*        SECCIÓN ALIADOS           */
 /* -------------------------------- */
       
-      .seccion-titulo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        background-color: #D5FF81;
-        padding: 20px 0;
-      }
-      
-      .titulo-principal {
-        font-family: 'Pacifico', cursive;
-        font-size: 2.5rem;
-        color: white;
-        text-shadow: 2px 2px 5px #888;
-        margin: 0;
-      }
-      
-      .barra-lateral {
-        width: 100%;
-        max-width: 450px;
-        height: 15px;
-        background: linear-gradient(to bottom, #c1a849, #a48e3b);
-        border-radius: 10px;
-        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
-      }
+.seccion-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw; /* Espaciado relativo */
+  background-color: #D5FF81; /* Color de fondo */
+  padding: 2vw 0; /* Espaciado superior e inferior relativo */
+  text-align: center; /* Asegura que el texto esté centrado */
+}
+
+.tituloBarra {
+  font-size: 4vw; /* Tamaño del texto relativo */
+  font-family: "Agbalumo", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  text-shadow: 2px 2px 5px #888;
+  margin: 0;
+}
+
+.barra-lateral {
+  width: 100%;
+  max-width: 40vw; /* Ancho máximo relativo */
+  height: 2vw; /* Altura relativa */
+  background: linear-gradient(to bottom,rgb(83, 47, 18), rgb(83, 47, 18)); /* Gradiente */
+  border-radius: 1vw; /* Bordes redondeados relativos */
+  box-shadow: inset 0 0.3vw 0.6vw rgba(0, 0, 0, 0.3); /* Sombra interna relativa */
+}
       
       @media (max-width: 600px) {
         .seccion-titulo {
@@ -476,20 +431,20 @@ footer {
         margin: 2vw;
         justify-content: space-around;
         flex-wrap: wrap;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+        box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1); /* Sombra opcional relativa */
     }
       
-      .tarjeta-aliado {
-        flex: 1 1 200px;          /* Todos los contenedores tendrán el mismo tamaño mínimo */
-        max-width: 250px;         /* Tamaño máximo para mantener consistencia */
-        height: 300px;            /* Altura fija para uniformidad */
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
-        text-align: center;
-        margin: 0;                /* Elimina márgenes adicionales */
-      }
+    .tarjeta-aliado {
+      flex: 1 1 20vw; /* Tamaño mínimo relativo */
+      max-width: 25vw; /* Tamaño máximo relativo */
+      height: 30vw; /* Altura relativa */
+      background-color: white;
+      border-radius: 1vw; /* Bordes redondeados relativos */
+      box-shadow: 0.5vw 1vw 2vw rgba(0, 0, 0, 0.2); /* Sombra relativa */
+      overflow: hidden;
+      text-align: center;
+      margin: 0; /* Elimina márgenes adicionales */
+    } 
       
       .tarjeta-aliado img {
         width: 100%;
@@ -497,103 +452,102 @@ footer {
       }
       
       .texto-aliado {
-        padding: 10px;
-        font-size: 14px;
+        padding: 1vw; /* Espaciado interno relativo */
+        font-size: 1.2vw; /* Tamaño del texto relativo */
         color: #333;
-      }
+    }
       
       /* Personalización envío */
       .tarjeta-envio {
-        max-width: 500px;
+        max-width: 40vw;
         width: 100%;
       }
       
       .imagen-envio {
         width: 100%;
-        max-width: 500px;
+        max-width: 50vw;
         height: auto;
         display: block;
         margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 1vw;
+        box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.1); /* Sombra relativa */
       }
-      
+
       .texto-envio {
-        margin-top: 10px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 18px;
-        background-color: #f3f3f3;
-        padding: 8px 16px;
-        border-radius: 10px;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-      }
+    margin-top: 1vw; /* Margen superior relativo */
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5vw; /* Tamaño del texto relativo */
+    background-color: #f3f3f3;
+    padding: 0.8vw 1.6vw; /* Espaciado interno relativo */
+    border-radius: 1vw; /* Bordes redondeados relativos */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
       
       /* Formulario */
       .formulario-envio {
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        max-width: 400px;
+        gap: 2vw; /* Espaciado entre elementos relativo */
+        max-width: 40vw; /* Ancho máximo relativo */
         width: 100%;
-      }
+    }
       
-      .formulario-envio label {
-        font-weight: bold;
-        margin-top: 10px;
-        color: #4d4d4d;
-      }
+    .formulario-envio label {
+      font-weight: bold;
+      margin-top: 1vw; /* Margen superior relativo */
+      color: #4d4d4d;
+      font-size: 1.5vw; /* Tamaño del texto relativo */
+  }
       
-      .formulario-envio input {
-        border: none;
-        border-radius: 10px;
-        padding: 10px;
-        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
-        font-size: 16px;
-      }
-      
-      .campo-fijo {
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        padding: 10px;
-        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
-        font-size: 16px;
-        color: #333;
-      }
-      
-  /* Aliados comerciales */
-  .contenedor-aliados {
-    background-color: #D5FF81; /* Cambia este color al que desees */
-    display: flex;
-    flex-wrap: wrap;       
-    justify-content: center;
-    gap: 30px;
-    margin: 40px 20px;
-    overflow-x: auto;         /* ✅ Scroll horizontal si no caben */
+  .formulario-envio input {
+    border: none;
+    border-radius: 1vw; /* Bordes redondeados relativos */
+    padding: 1vw; /* Espaciado interno relativo */
+    box-shadow: 0.1vw 0.2vw 0.5vw rgba(0, 0, 0, 0.2); /* Sombra relativa */
+    font-size: 1.5vw; /* Tamaño del texto relativo */
 }
 
-  
-  
+.campo-fijo {
+    background-color: #f5f5f5;
+    border-radius: 1vw; /* Bordes redondeados relativos */
+    padding: 1vw; /* Espaciado interno relativo */
+    box-shadow: 0.1vw 0.2vw 0.5vw rgba(0, 0, 0, 0.1); /* Sombra relativa */
+    font-size: 1.5vw; /* Tamaño del texto relativo */
+    color: #333;
+}
+
+/* Aliados comerciales */
+.contenedor-aliados {
+    background-color: #D5FF81; /* Color de fondo */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3vw; /* Espaciado entre tarjetas relativo */
+    margin: 4vw 2vw; /* Espaciado externo relativo */
+    overflow-x: auto; /* Scroll horizontal si no caben */
+}
+
 .contenedor-img {
     height: 80%; /* La imagen ocupará toda la altura de la tarjeta */
-    width: 100%;  /* La imagen ocupará todo el ancho de la tarjeta */
+    width: 100%; /* La imagen ocupará todo el ancho de la tarjeta */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga */
-  }
-  
-  .contenedor-img img {
+}
+
+.contenedor-img img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Escala la imagen para llenar el contenedor */
-  }
-  
-  .texto-aliado {
-    font-size: 14px;
+}
+
+.texto-aliado {
+    font-size: 1.2vw; /* Tamaño del texto relativo */
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 1vw; /* Margen superior relativo */
     color: #333;
-  }
+}
