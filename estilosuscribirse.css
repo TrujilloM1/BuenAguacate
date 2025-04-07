@@ -1,0 +1,158 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .modal {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 10px;
+  }
+  
+  .formulario {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 320px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: none;
+  }
+  
+  .modal h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  
+  .modal p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .botones-modal {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .botones-modal button {
+    background-color: #76c34e;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 48%;
+    margin: 10px;
+  }
+  
+  body.modal-abierto {
+    overflow: hidden; /* Evitar scroll cuando el modal está abierto */
+  }
+  
+  .botones-modal button:hover {
+    background-color: #5ea63d;
+  }
+  
+  .formulario h2 {
+    background-color: #76c34e;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 20px -20px;
+    font-size: 1.5rem;
+  }
+  
+  .formulario label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+  
+  .formulario input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e5c76a;
+    font-size: 1rem;
+  }
+  
+  .contenedor-clave {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contenedor-clave input {
+    width: 100%;
+    padding-right: 40px;
+  }
+  
+  .mostrar-clave {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .boton-enviar {
+    background-color: #76c34e;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .boton-enviar:hover {
+    background-color: #5ea63d;
+  }
+  
+  .cerrar-formulario {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  /* Fondo oscuro detrás del modal */
+#fondoModal {
+  display: none; /* Ocultar por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+

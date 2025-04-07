@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BuenAguacate - Suscripción</title>
+  <link rel="stylesheet" href="estilosuscribirse.css" />
+</head>
+<body>
+
+  <div id="fondoModal" onclick="cerrarInfo()"></div>
+
+  <!-- Ventana Informativa -->
+  <div class="modal" id="modalInfo">
+    <h2>¿Por qué suscribirte?</h2>
+    <p>
+      Al suscribirte a BuenAguacate recibirás descuentos especiales, noticias exclusivas
+      y tips para aprovechar al máximo tus productos. ¡Únete a nuestra comunidad verde!
+    </p>
+    <div class="botones-modal">
+      <button onclick="volverAPaginaAnterior()">Volver</button>
+
+      <button onclick="mostrarFormulario()">Aceptar</button>
+
+    </div>
+  </div>
+  
+
+  <!-- Formulario de suscripción -->
+  <div class="formulario" id="formulario">
+    <h2>BuenAguacate <br> Suscribirse</h2>
+    
+    <label for="usuario">Usuario</label>
+    <input type="text" id="usuario" placeholder="Ejemplo">
+
+    <label for="clave">Contraseña</label>
+    <div class="contenedor-clave">
+      <input type="password" id="clave" placeholder="*************">
+      <img src="https://i.imgur.com/fc97Dgu.png" id="iconoClave" class="mostrar-clave" onclick="alternarClave()">
+    </div>
+
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" placeholder="ejemplo@BuenAguacate.com">
+
+    <button class="boton-enviar" onclick="validarFormulario()">Suscribirse</button>
+    
+    <button class="cerrar-formulario" onclick="cerrarFormulario()">X</button>
+  </div>
+
+  <script src="funcionesuscribirse.js"></script>
+
+</body>
+</html>
