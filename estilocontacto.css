@@ -94,3 +94,85 @@ body.contacto-body {
   cursor: pointer;
 }
 
+/* ==== CHAT EN VIVO ==== */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 280px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+}
+
+.chat-header {
+  background-color: #4b8b3b;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.chat-body {
+  display: none;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-mensajes {
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.chat-mensajes div {
+  margin-bottom: 8px;
+}
+
+.chat-mensajes .usuario {
+  text-align: right;
+  color: #333;
+}
+
+.chat-mensajes .bot {
+  text-align: left;
+  color: #4b8b3b;
+  font-style: italic;
+}
+
+#chatInput {
+  border: none;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+}
+.chatbot {
+  position: fixed;
+  bottom: 80px; /* Ajustado para que salga justo arriba del ícono flotante */
+  right: 25px;
+  width: 280px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+  display: none; /* Oculto al inicio */
+  animation: aparecerSuave 0.4s ease;
+}
+
+@keyframes aparecerSuave {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

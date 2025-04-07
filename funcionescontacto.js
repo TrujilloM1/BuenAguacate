@@ -18,4 +18,50 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("¡Gracias por contactarnos! Te responderemos pronto 😊");
     formulario.reset();
   });
+
+  // Mostrar el chat cuando se da clic en el ícono
+  const iconoChat = document.getElementById("iconoChat");
+  const chatBot = document.querySelector(".chatbot");
+
+  iconoChat.addEventListener("click", function () {
+    chatBot.style.display = "block";
+  });
 });
+
+// Alternar visibilidad del chat al hacer clic en el header
+function toggleChat() {
+  const chatBot = document.querySelector(".chatbot");
+  chatBot.style.display = chatBot.style.display === "block" ? "none" : "block";
+}
+
+function enviarMensaje() {
+  const input = document.getElementById("chatInput");
+  const mensaje = input.value.trim();
+  if (mensaje === "") return;
+
+  const chatMensajes = document.getElementById("chatMensajes");
+
+  // Mensaje del usuario
+  const divUsuario = document.createElement("div");
+  divUsuario.className = "usuario";
+  divUsuario.textContent = mensaje;
+  chatMensajes.appendChild(divUsuario);
+
+  // Respuesta automática del bot
+  const divBot = document.createElement("div");
+  divBot.className = "bot";
+  divBot.textContent = generarRespuesta(mensaje);
+  chatMensajes.appendChild(divBot);
+
+  chatMensajes.scrollTop = chatMensajes.scrollHeight;
+  input.value = "";
+}
+
+function generarRespuesta(mensaje) {
+  const lower = mensaje.toLowerCase();
+  if (lower.includes("hola")) return "¡Hola! ¿En qué puedo ayudarte?";
+  if (lower.includes("precio")) return "Puedes consultar los precios en la sección de productos.";
+  if (lower.includes("envío") || lower.includes("envios")) return "Realizamos envíos nacionales de 2 a 5 días hábiles.";
+  if (lower.includes("gracias")) return "¡Con gusto! 😊";
+  return "Lo siento, no entendí tu mensaje. ¿Puedes reformularlo?";
+}

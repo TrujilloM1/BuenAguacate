@@ -44,15 +44,30 @@
     </form>
 
     <!-- Íconos flotantes -->
-    <div class="iconos-contacto">
-      <a href="https://wa.me/1234567890" target="_blank">
-        <img src="https://i.imgur.com/ebLZXpR.png" alt="WhatsApp" />
-      </a>
-      <a href="#">
-        <img src="https://i.imgur.com/s0hTHm1.png" alt="Chat" />
-      </a>
+     
+      <div class="iconos-contacto">
+        <a href="https://wa.me/1234567890" target="_blank">
+          <img src="https://i.imgur.com/ebLZXpR.png" alt="WhatsApp" />
+        </a>
+        <a id="iconoChat">
+          <img src="https://i.imgur.com/s0hTHm1.png" alt="Chat" />
+        </a>
+      </div>
+      
+      
     </div>
   </section>
+
+  <!-- Chat en Vivo -->
+  <div class="chatbot">
+    <div class="chat-header" onclick="toggleChat()">
+      💬 ¿Necesitas ayuda?
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-mensajes" id="chatMensajes"></div>
+      <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." onkeydown="if(event.key === 'Enter') enviarMensaje()">
+    </div>
+  </div>
 
   <!-- Aquí iría tu componente de pie de página (footer) -->
 
