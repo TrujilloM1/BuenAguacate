@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto - BuenAguacate</title>
+  <link rel="stylesheet" href="estilocontacto.css" />
+  <script defer src="funcionescontacto.js"></script>
+</head>
+<body class="contacto-body">
+
+  <!-- Aquí iría tu componente de encabezado (header) -->
+
+  <section class="seccion-contacto">
+    <h2 class="titulo-contacto">
+      <span class="linea"></span>
+      Contáctanos
+      <span class="linea"></span>
+    </h2>
+
+    <form class="formulario-grid" id="formularioContacto">
+      <div class="columna-izquierda">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" required />
+
+        <label for="numero">Número:</label>
+        <input type="tel" id="numero" required />
+
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" required />
+      </div>
+
+      <div class="columna-derecha">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" rows="7" required></textarea>
+      </div>
+
+      <div class="boton-centro">
+        <button type="submit" class="boton-enviar-contacto">Enviar</button>
+      </div>
+    </form>
+
+    <!-- Íconos flotantes -->
+    <div class="iconos-contacto">
+      <a href="https://wa.me/1234567890" target="_blank">
+        <img src="https://i.imgur.com/ebLZXpR.png" alt="WhatsApp" />
+      </a>
+      <a href="#">
+        <img src="https://i.imgur.com/s0hTHm1.png" alt="Chat" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Aquí iría tu componente de pie de página (footer) -->
+
+</body>
+</html>
+
