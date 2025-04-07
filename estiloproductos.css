@@ -1,5 +1,6 @@
 /* Aqui inicia el encabezado para cada pagina */
 /* ENCABEZADO SUPERIOR CON LOGO */
+/* ENCABEZADO SUPERIOR CON LOGO */
 .encabezado-superior {
   background: linear-gradient(to bottom, #D5FF81, #D5FF81);
   padding: 5px 0;
@@ -39,9 +40,7 @@
       width: 40px;
   }
 }
-/* Aqui llega el encabezado para cada pagina */
-
-/* Aqui inicia la barra de navegacion para cada pagina */
+/**/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
