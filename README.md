@@ -7,6 +7,6 @@
 </head>
 <body>
   <h1>Redireccionando...</h1>
-  <p>Redireccionando a la página principal... Si no ocurre automáticamente, <a href="./inicio.html">haz clic aquí</a>.</p>
+  <p>Redireccionando a la página principal... Si no ocurre automáticamente, <a href="./paginaprincipal.html">haz clic aquí</a>.</p>
 </body>
 </html>
