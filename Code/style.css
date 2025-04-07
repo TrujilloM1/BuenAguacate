@@ -71,7 +71,7 @@ body {
 /* Logo */
 
 
-/* Estilo de los enlaces */
+/* Estilo de los enlaces  del drop de nosotros*/
 .nav-link {
     color: #ffffff;
     display: flex;
@@ -90,11 +90,11 @@ body {
 .nav-dropdown {
     position: relative;
 }
-
+/*Aqui se ajusta el drop de nosotros*/
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 102%;
     left: 0;
     background-color: rgba(83, 47, 18, 0.5);
     border-radius: 5px;
@@ -138,22 +138,22 @@ body {
 .user-menu {
     display: none;
     position: absolute;
-    top: 130%;
+    top: 137%;
     right: 0;
     background-color: rgba(83, 47, 18, 0.5);
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 140px; /* Reduce el ancho mínimo */
 }
-
+/* Es para ajustar el drop de usuario*/
 .user-menu a {
     color: white;
     font-size: 14px; /* Reduce el tamaño del texto */
-    padding: 15px 40px; /* Ajusta el padding */
+    padding: 12px 40px; /* Ajusta el padding */
     display: block;
     text-decoration: none;
 }
-
+/* drop de usuario*/
 .user-menu a:hover {
     background-color: #f1f1f18a;
     color: rgb(255, 255, 255);
@@ -199,7 +199,7 @@ body {
     .user-menu {
         min-width: 80px; /* Reduce el ancho mínimo del menú de usuario */
     }
-    
+
 }
 .seccion-recetas {
     background-color: #D5FF81;
