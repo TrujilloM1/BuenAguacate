@@ -1,3 +1,4 @@
+<!-- Aqui inicia lo que deben pegar en sus codigos para el header, footer y barra divisora -->
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -15,31 +16,33 @@
       <!-- Encabezado superior con logo y texto -->
       <header class="encabezado-superior">
         <div class="contenedor-logo-texto">
-            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
+            <img src="imagenes/LogoBuenaguacate.png" alt="Logo BuenAguacate" class="logo-superior">
             <h1 class="titulo-principal">BuenAguacate</h1>
         </div>
     </header>
 
     <!-- Barra de navegación -->
     <nav class="navbar">
-        <div class="nav-left">
-            
-            <a href="#" class="nav-link">Inicio</a>
-            <a href="#" class="nav-link">Productos</a>
-            <a href="#" class="nav-link">Recetas</a>
+         <!-- Botón menú hamburguesa -->
+         <button class="hamburger" id="hamburger-btn">
+            ☰
+        </button>
+        <div class="nav-links" id="nav-links">
+            <a href="paginaprincipal.html" class="nav-link">Inicio</a>
+            <a href="productos.html" class="nav-link">Productos</a>
+            <a href="recetas.html" class="nav-link">Recetas</a>
             <div class="nav-dropdown">
                 <a href="#" class="nav-link dropdown-btn">Nosotros</a>
                 <div class="dropdown-content">
-                    <a href="#">Certificados de Calidad</a>
-                    <a href="#">Nuestra Empresa</a>
-                    <a href="#">Comercialización</a>
+                    <a href="nosotros_certificados.html">Certificados de Calidad</a>
+                    <a href="nuestraempresa.html">Nuestra Empresa</a>
+                    <a href="comercializacion.html">Comercialización</a>
                 </div>
             </div>
-            <a href="#" class="nav-link">Contacto</a>
+            <a href="contactanos.html" class="nav-link">Contacto</a>
         </div>
         
         <!-- Menú de usuario -->
-        <div class="nav-right">
             <div class="user-dropdown">
                 <button class="user-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
@@ -49,7 +52,7 @@
                 </button>
                 <div class="user-menu">
                     <a href="#">Iniciar Sesión</a>
-                    <a href="#">Suscríbete</a>
+                    <a href="suscribirse.html">Suscríbete</a>
                 </div>
             </div>
         </div>
@@ -60,79 +63,162 @@
             <h2 class="tituloBarra">Recetas</h2>
             <div class="barra-lateral"></div>
           </div>
+            <!-- Hasta aqui llega el codigo que deben pegar en sus codigos aqui abajo va el contenido de cada pagina -->
     <!-- Sección de Recetas -->
     <section class="seccion-recetas">
         <div class="contenedor-recetas">
 
 
             <!-- Tarjeta 1 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/UUYnLAX.png" alt="Cestitas rellenas con aguacate">
-                <p>
-                    Esta receta de cestitas rellenas es una manera sana y deliciosa de comer aguacate. Puedes hacerlos para la cena o como aperitivo en una comida. ¡Además, se tarda poco más de media hora en hacer!
-                </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta1Cesta.png" alt="Receta">
+                <p>Esta receta de cestitas rellenas es una manera sana y deliciosa de comer aguacate. Puedes hacerlos para la cena o como aperitivo en una comida. ¡Además, se tarda poco más de media hora en hacer!</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>4 láminas de pasta/masa filo</li>
+                    <li>400 g de lomo de salmón </li>
+                    <li>2 aguacates</li>
+                    <li>12 tomatitos cherry</li>
+                    <li>1 cebolla morada</li>
+                    <li>1 limón</li>
+                    <li>Mantequilla</li>
+                    <li>Aceite de oliva</li>
+                    <li>Pimienta negra </li>
+                    <li>Sal al gusto</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                    <P><strong>Paso 1.</strong> Precalienta el horno a 180º. De mientras, Pincela las láminas de pasta con un poco de mantequilla fundida en el microondas. </P>
+                    <P><strong>Paso 2.</strong> Corta cada lámina en dos partes, dóblalas por la mitad y forra con ellas un molde con forma de tartaleta. </P>
+                    <P><strong>Paso 3.</strong> Mete los moldes con la masa en el horno durante 15 minutos y retíralos. Exprime el limón y mezcla la mitad del zumo con tres cucharaditas de sal, aceite y pimienta. También lava el salmón y córtalo en daditos. Cuécelos durante 8 minutos y déjalos enfriar.  </P>
+                    <P><strong>Paso 4.</strong>. Pela la cebolla morada y córtala. Haz lo mismo con los tomates, y corta cada cherry por la mitad. El aguacate, también por la mitad; quítale el hueso y extrae la pulpa. Retírala, trocéala y añade un poco de limón. </P>
+                    <P><strong>Paso 5.</strong> Mezcla todos los ingredientes en un recipiente y añade el salmón (si quieres, vuelve añadir un toque de limón). Cuando todo esté bien mezclado, repártelo entre cada tartaleta.  </P>
+                 
+                  
+                </div>
+              </div>
             <!-- Tarjeta 2 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/9g03BfD.png" alt="Guacamole con queso">
-                <p>
-                    Hay poca gente a la que no le guste el guacamole y más este con matices de queso. ¡Está delicioso! Con esta receta acompañada de verduritas, ¡no fallarás!
-                </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta2Guacamole.png" alt="Receta">
+                <p>Descripción corta de la receta.</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>Ingrediente 1</li>
+                    <li>Ingrediente 2</li>
+                  </ul>
+                  <p>Preparación detallada de la receta.</p>
+                </div>
+              </div>
             <!-- Tarjeta 3 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/5nfze7h.png" alt="Aderezo de aguacate">
-                <p>
-                    Si no sabes cómo aprovechar algunas almendras, esta receta de aguacate te encantará. ¡Nada mejor que algo fresco y original para comer!
-                </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta3Aderezo.png" alt="Receta">
+                <p>Descripción corta de la receta.</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>Ingrediente 1</li>
+                    <li>Ingrediente 2</li>
+                  </ul>
+                  <p>Preparación detallada de la receta.</p>
+                </div>
+              </div>
             <!-- Tarjeta 4 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/dNBHV1t.png" alt="Ceviche de aguacate">
-                <p>El ceviche es uno de los platos más típicos de la gastronomía de varios países como Perú o Chile. Para convertirlo en una receta de aguacate, tan solo necesitas champiñones y alguna cosilla más. ¡Descúbrelas!</p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta4.png" alt="Receta">
+                <p>Descripción corta de la receta.</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>Ingrediente 1</li>
+                    <li>Ingrediente 2</li>
+                  </ul>
+                  <p>Preparación detallada de la receta.</p>
+                </div>
+              </div>
             <!-- Tarjeta 5 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/REGJ72e.png" alt="Ensalada de aguacate">
-                <p>Si no sabes cómo comer aguacate, o todavía muchas recetas de la mano, puedes empezar por esta copa de tomate, aguacate y pipas de girasol. Es muy fácil y el resultado es verdaderamente bueno. </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta5.png" alt="Receta">
+                <p>Descripción corta de la receta.</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>Ingrediente 1</li>
+                    <li>Ingrediente 2</li>
+                  </ul>
+                  <p>Preparación detallada de la receta.</p>
+                </div>
+              </div>
             <!-- Tarjeta 6 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/jvqkr13.png" alt="Salmon con aguacate">
-                <p>Hay decenas de recetas de aguacate, pero a las que le sumas el salmón, son verdaderamente difíciles de superar. </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta6.png" alt="Receta">
+                <p>Descripción corta de la receta.</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>Ingrediente 1</li>
+                    <li>Ingrediente 2</li>
+                  </ul>
+                  <p>Preparación detallada de la receta.</p>
+                </div>
+              </div>
             <!-- Tarjeta 7 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/W6vwN0K.png" alt="Tarta de aguacate">
-                <p>El tartar es siempre un plato estrella en las cenas, ¡sobre todo si lleva aguacate! Además, con el salmón marinado, lograrás un resultado excepcional. </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta7.png" alt="Receta">
+                <p>Descripción corta de la receta.</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>Ingrediente 1</li>
+                    <li>Ingrediente 2</li>
+                  </ul>
+                  <p>Preparación detallada de la receta.</p>
+                </div>
+              </div>
             <!-- Tarjeta 8 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/du4wHZi.png" alt="Pasta con aguacate">
-                <p>A todos nos gusta la pasta. Entre todas las recetas de aguacate, esta es una de las más sencillas de elaborar: toma nota del siguiente paso por paso porque este plato con aguacate te salvará muchos mediodías. </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta8.png" alt="Receta">
+                <p>Descripción corta de la receta.</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>Ingrediente 1</li>
+                    <li>Ingrediente 2</li>
+                  </ul>
+                  <p>Preparación detallada de la receta.</p>
+                </div>
+              </div>
             <!-- Tarjeta 9 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/Ki1puhX.png" alt="Huevo poche con aguacate">
-                <p>Si no sabes cómo hacer una tortilla de patatas, o ya te has cansado de la receta tradicional, prueba esta versión más "delicatessen" con aguacate.</p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta9.png" alt="Receta">
+                <p>Descripción corta de la receta.</p>
+                <div class="informacion-extra">
+                  <h3>Ingredientes</h3>
+                  <ul>
+                    <li>Ingrediente 1</li>
+                    <li>Ingrediente 2</li>
+                  </ul>
+                  <p>Preparación detallada de la receta.</p>
+                </div>
+              </div>
         </div>
     </section>
+    <div class="overlay" onclick="cerrarTarjetaExpandida()"></div>
     <footer>
         <div class="footer-container">
           
           <!-- Bloque de enlaces organizados en dos columnas -->
           <div class="footer-links">
             <ul>
-              <li><a href="#">Inicio</a></li>
-              <li><a href="#">Certificados de Calidad</a></li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="#">Nuestra Empresa</a></li>
+              <li><a href="paginaprincipal.html">Inicio</a></li>
+              <li><a href="nosotros_certificados.html">Certificados de Calidad</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="nuestraempresa.html">Nuestra Empresa</a></li>
             </ul>
             <ul>
-              <li><a href="#">Recetas</a></li>
-              <li><a href="#">Comercialización</a></li>
-              <li><a href="#">Contacto</a></li>
+              <li><a href="recetas.html">Recetas</a></li>
+              <li><a href="comercializacion.html">Comercialización</a></li>
+              <li><a href="contactanos.html">Contacto</a></li>
             </ul>
           </div>
       

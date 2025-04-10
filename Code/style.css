@@ -1,4 +1,4 @@
-
+/* Aqui inicia el encabezado para cada pagina */
 /* ENCABEZADO SUPERIOR CON LOGO */
 .encabezado-superior {
     background: linear-gradient(to bottom, #D5FF81, #D5FF81);
@@ -39,7 +39,9 @@
         width: 40px;
     }
 }
-/**/
+/* Aqui llega el encabezado para cada pagina */
+
+/* Aqui inicia la barra de navegacion para cada pagina */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -50,7 +52,11 @@ body {
 
 /* Navbar */
 .navbar {
+    position: sticky;
+    display: flex;
     background-color: #532F12;
+    top: 0 ;
+    z-index: 999;
     height: 70px;
     padding: 0 10px;
     display: flex;
@@ -60,12 +66,21 @@ body {
 }
 
 /* Enlaces a la izquierda */
-.nav-left {
+.nav-links {
     display: flex;
-    align-items: space-between;
-    justify-content: space-between;
-    flex: 1;
-    gap: 15px;
+    align-items: center;
+    gap: 20px; /* Reduce el espacio entre enlaces */
+    margin-left: 20px; /* Reduce el margen izquierdo */
+}
+
+/* Menú hamburguesa */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none; /* Oculto en escritorio */
 }
 
 /* Logo */
@@ -74,16 +89,30 @@ body {
 /* Estilo de los enlaces  del drop de nosotros*/
 .nav-link {
     color: #ffffff;
+    align-items: center;
+    gap: 20px; /* Reduce el espacio entre enlaces */
     display: flex;
     text-decoration: none;
-    font-size: 16px; /* Reduce el tamaño del texto */
-    padding: 25px 100px; /* Ajusta el padding */
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Reduce el tamaño del texto */
+    padding: 12px 20px; /* Ajusta el padding */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+/* indicador visual de página activa*/
+.nav-link.active {
+    background-color: #D5FF81;
+    color: #532F12;
+    font-weight: bold;
 }
 
 .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+/* Efecto sutil de sombra o fondo al hacer scroll*/
+.scrolled {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
 }
 
 /* Dropdown */
@@ -100,6 +129,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 140px; /* Reduce el ancho mínimo */
+    z-index: 1000;
 }
 
 .dropdown-content a {
@@ -163,28 +193,52 @@ body {
     display: block;
 }
 @media (max-width: 600px) {
+
+    .hamburger {
+        display: block;
+    }
     .navbar {
-        flex-direction: row;
+        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: auto;
-        padding: 5% 8%;
+        padding: 10px 0;
         gap: 0.5%; /* Reduce el espacio entre elementos */
     }
-
-    .nav-left, .nav-right {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5%; /* Reduce el espacio entre elementos */
-    }
-
     .nav-link {
         font-size: 0.8rem; /* Reduce el tamaño del texto */
-        padding: 5% 5%; /* Ajusta el padding */
+        padding: 10px 15px; /* Ajusta el padding */
         text-align: center;
+        display: none;
+        flex-direction: column;
+        background-color: #532F12;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        z-index: 1000;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #7BA05B;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
     }
 
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-link, .user-btn {
+        padding: 10px 0;
+        text-align: center;
+    }
     .logo {
         width: 8%; /* Reduce el tamaño del logo */
         height: auto;
@@ -196,11 +250,24 @@ body {
         width: 8%; /* Reduce el tamaño del botón de usuario */
         height: auto;
     }
+    .user-dropdown {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .dropdown-content {
+        position: static;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: none;
+        border-radius: 0;
+    }
     .user-menu {
         min-width: 80px; /* Reduce el ancho mínimo del menú de usuario */
     }
 
 }
+/* Aqui finaliza la barra de navegacion para cada pagina */
+
+/* Aqui comienza el contenido de la pagina */
 .seccion-recetas {
     background-color: #D5FF81;
     padding: 3rem 2rem;
@@ -229,6 +296,8 @@ body {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
 }
 
 .tarjeta-receta:hover {
@@ -239,6 +308,7 @@ body {
     width: 100%;
     height: auto;
     object-fit: cover;
+    display: block;
 }
 
 .tarjeta-receta p {
@@ -249,11 +319,82 @@ body {
     text-align: justify;
 }
 
+/* Tarjeta expandida y overlay */
+.informacion-extra {
+    display: none;
+    padding: 1rem;
+    text-align: left;
+    border-top: 1px solid #eee;
+    background-color: #ffffff;
+  }
+  
+  .tarjeta-receta.expandida .informacion-extra {
+    display: block;
+  }
+  
+  /* Al estar expandida */
+.tarjeta-receta.expandida {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 500px;
+    height: 70vh;
+    transform: translate(-50%, -50%) scale(1.05);
+    z-index: 1001;
+    background-color: white;
+    overflow-y: auto;
+    padding: 0;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    border-radius: 15px;
+    scrollbar-width: none; /* oculta scrollbar en Firefox */
+  }
+
+  .tarjeta-receta.expandida::-webkit-scrollbar {
+    display: none; /* oculta scrollbar en Chrome/Safari */
+  }
+
+  .tarjeta-receta.expandida img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  /* Fondo oscuro */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    display: none;
+  }
+  
+  /* Mostrar el overlay activo */
+  .overlay.activo {
+    display: block;
+  }
+  
+  /* Desactivar scroll cuando tarjeta está expandida */
+  body.bloquear-scroll {
+    overflow: hidden;
+  }
+  /* Mostrar al estar expandida */
+.tarjeta-receta.expandida .informacion-extra {
+    display: block;
+  }
+
 /* Responsive para móviles */
 @media (max-width: 768px) {
     .contenedor-recetas {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
+        padding: 0 3rem;
     }
 
     .seccion-recetas h2 {
@@ -264,7 +405,8 @@ body {
         font-size: 15px;
     }
 }
-/* Footer*/
+/* finaliza contenido de la pagina */
+/* Footer el style del footer */
 footer {
     background-color: rgb(83, 47, 18);
     padding: 10px; /* Reduce el padding */
@@ -420,5 +562,6 @@ footer {
       text-align: center;
     }
   }
+  /* hasta aqui va el footer y la barra divisora */
   /*---------------------------------------------*/
   
