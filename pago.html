@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zona de Pagos - BuenAguacate</title>
+  <link rel="stylesheet" href="pagos.css" />
+</head>
+<body>
+
+  <div class="contenedor-pago">
+    <h2>Zona de Pagos</h2>
+
+    <form id="formPago">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" required />
+
+      <label for="direccion">Dirección</label>
+      <input type="text" id="direccion" required />
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" required />
+
+      <label for="metodo">Método de pago</label>
+      <select id="metodo" required>
+        <option value="">Selecciona un método</option>
+        <option value="tarjeta">Tarjeta de crédito</option>
+        <option value="nequi">Nequi</option>
+        <option value="daviplata">Daviplata</option>
+        <option value="contraentrega">Pago contra entrega</option>
+      </select>
+
+      <p id="total">Total a pagar: $0</p>
+
+      <button type="submit">Confirmar Pago</button>
+    </form>
+
+    <div id="mensajeAprobado" style="display:none;">
+      <h3>¡Pago aprobado!</h3>
+      <p>Tu número de orden es: <span id="numeroOrden"></span></p>
+      <a href="comercializacion.html">Seguimiento de compra</a>
+    </div>
+  </div>
+
+  <script src="pagos.js"></script>
+</body>
+</html>
