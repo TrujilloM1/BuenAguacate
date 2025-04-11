@@ -14,21 +14,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+const imagenHero = document.getElementById("imagen-hero");
+const btnIzquierda = document.querySelector(".carrusel-btn.izquierda");
+const btnDerecha = document.querySelector(".carrusel-btn.derecha");
+
 const imagenes = [
-  "https://i.imgur.com/bboNtNz.jpeg",
-  "https://i.imgur.com/WkMRy5R.png",
-  "https://i.imgur.com/2uoELeb.jpeg",
-  "https://i.imgur.com/3AC3TJw.jpeg",
-  "https://i.imgur.com/LVUhEfS.jpeg",
-  "https://i.imgur.com/fOklekx.jpeg"
-
+  "img-inicio/aguacate01.jpeg",
+  "img-inicio/aguacate02.jpeg",
+  "img-inicio/aguacate03.jpeg",
+  "img-inicio/aguacate04.jpeg",
+  "img-inicio/aguacate05.jpeg",
+  "img-inicio/aguacate06.jpeg"
 ];
-let indice = 0;
 
-function cambiarImagen(direccion) {
-  indice = (indice + direccion + imagenes.length) % imagenes.length;
-  document.getElementById("imagen-hero").src = imagenes[indice];
+let indiceActual = 0;
+
+function mostrarImagen(indice) {
+  imagenHero.src = imagenes[indice];
 }
+
+btnIzquierda.addEventListener("click", () => {
+  indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+  mostrarImagen(indiceActual);
+});
+
+btnDerecha.addEventListener("click", () => {
+  indiceActual = (indiceActual + 1) % imagenes.length;
+  mostrarImagen(indiceActual);
+});
+
 
 //  Funcionalidad del botón "Suscríbete"
 const botonSuscribirse = document.getElementById('boton-suscribirse');
