@@ -675,3 +675,44 @@ footer {
   margin-top: 10px;
   color: #2d772d;
 }
+
+@media (max-width: 768px) {
+  .contenedor-resumen {
+    padding: 15px; /* Reduce el padding */
+    margin: 10px; /* Reduce el margen */
+    max-width: 100%; /* Usa todo el ancho disponible */
+    box-shadow: none; /* Opcional: elimina la sombra para simplificar */
+  }
+
+  .item-resumen {
+    flex-direction: column; /* Cambia a diseño vertical */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    gap: 10px; /* Espaciado entre elementos */
+  }
+
+  .item-resumen span {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+  }
+
+  .item-resumen button {
+    align-self: flex-end; /* Alinea el botón al final */
+    width: 100%; /* Botón ocupa todo el ancho */
+    padding: 10px; /* Ajusta el padding */
+  }
+
+  .resumen-acciones {
+    flex-direction: column; /* Cambia a diseño vertical */
+    gap: 10px; /* Espaciado entre botones */
+  }
+
+  .resumen-acciones button {
+    width: 100%; /* Botones ocupan todo el ancho */
+    margin: 5px 0; /* Espaciado vertical entre botones */
+  }
+
+  .total-compra {
+    text-align: center; /* Centra el texto del total */
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    margin-top: 15px;
+  }
+}
