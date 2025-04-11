@@ -1,40 +1,65 @@
-//nuevo js
 document.addEventListener("DOMContentLoaded", function () {
+    // Menú de usuario
     const userBtn = document.querySelector('.user-btn');
     const userMenu = document.querySelector('.user-menu');
 
-    userBtn.addEventListener('click', function () {
-        userMenu.classList.toggle('show');
-    });
+    if (userBtn && userMenu) {
+        userBtn.addEventListener('click', function () {
+            userMenu.classList.toggle('show');
+        });
 
-    // Cerrar el menú si se hace clic fuera
-    window.addEventListener('click', function (e) {
-        if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
-            userMenu.classList.remove('show');
-        }
-    });
+        window.addEventListener('click', function (e) {
+            if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
+                userMenu.classList.remove('show');
+            }
+        });
+    }
 
-    //  Funcionalidad del botón "Suscríbete"
-    const botonSuscribirse = document.getElementById('boton-suscribirse');
-    if (botonSuscribirse) {
-        botonSuscribirse.addEventListener('click', () => {
-            window.location.href = 'suscribirse.html'; // Reemplaza con tu ruta real
+    // Menú hamburguesa
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active'); // para la animación
+        });
+
+        window.addEventListener('click', function (e) {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+        });
+    }
+    const dropdownBtn = document.querySelector(".dropdown-btn");
+    const navDropdown = document.querySelector(".nav-dropdown");
+
+    if (dropdownBtn && navDropdown) {
+        dropdownBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            navDropdown.classList.toggle("show");
+        });
+
+        window.addEventListener("click", function (event) {
+            if (!navDropdown.contains(event.target) && !dropdownBtn.contains(event.target)) {
+                navDropdown.classList.remove("show");
+            }
+            const botonSuscribirse = document.getElementById('boton-suscribirse');
+            if (botonSuscribirse) {
+                botonSuscribirse.addEventListener('click', () => {
+                    window.location.href = 'suscribirse.html'; // Reemplaza con tu ruta real
+                });
+            }
         });
     }
 });
-// Mostrar/ocultar menú del usuario
-document.addEventListener("DOMContentLoaded", function () {
-    const userBtn = document.querySelector('.user-btn');
-    const userMenu = document.querySelector('.user-menu');
 
-    userBtn.addEventListener('click', function () {
-        userMenu.classList.toggle('show');
-    });
 
-    // Cerrar el menú si se hace clic fuera
-    window.addEventListener('click', function (e) {
-        if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
-            userMenu.classList.remove('show');
-        }
-    });
+// Scroll efecto en navbar
+window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (navbar) {
+        navbar.classList.toggle("scrolled", window.scrollY > 0);
+    }
 });

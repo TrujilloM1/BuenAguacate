@@ -16,49 +16,51 @@
       <!-- Encabezado superior con logo y texto -->
       <header class="encabezado-superior">
         <div class="contenedor-logo-texto">
-            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
+            <img src="imagenes/LogoBuenaguacate.png" alt="Logo BuenAguacate" class="logo-superior">
             <h1 class="titulo-principal">BuenAguacate</h1>
         </div>
     </header>
 
     <!-- Barra de navegación -->
     <nav class="navbar">
-        <div class="nav-left">
-
-          <a href="paginaprincipal.html" class="nav-link">Inicio</a>
-          <a href="productos.html" class="nav-link">Productos</a>
-          <a href="recetas.html" class="nav-link">Recetas</a>
-          <div class="nav-dropdown">
-              <a href="#" class="nav-link dropdown-btn">Nosotros</a>
-              <div class="dropdown-content">
-                  <a href="nosotros_certificados.html">Certificados de Calidad</a>
-                  <a href="nuestraempresa.html">Nuestra Empresa</a>
-                  <a href="comercializacion.html">Comercialización</a>
-              </div>
-          </div>
-          <a href="contactanos.html" class="nav-link">Contacto</a>
-      </div>
+      <div class="navbar-content">
+        <div class="nav-links">
+            <a href="paginaprincipal.html" class="nav-link">Inicio</a>
+            <a href="productos.html" class="nav-link">Productos</a>
+            <a href="recetas.html" class="nav-link">Recetas</a>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-link dropdown-btn">Nosotros</a>
+                <div class="dropdown-content">
+                    <a href="nosotros_certificados.html">Certificados de Calidad</a>
+                    <a href="nuestraempresa.html">Nuestra Empresa</a>
+                    <a href="comercializacion.html">Comercialización</a>
+                </div>
+            </div>
+            <a href="contactanos.html" class="nav-link">Contacto</a>
+            
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         
         <!-- Menú de usuario -->
-        <div class="nav-right">
             <div class="user-dropdown">
                 <button class="user-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
-                        <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
-                        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
-                    </svg>
+                  <img src="imagenes/LogoUser.jpg" alt="Logo user-btn" class="LogoUser">
                 </button>
                 <div class="user-menu">
-                  <a href="#">Iniciar Sesión</a>
-                  <a href="suscribirse.html">Suscríbete</a>
-              </div>
+                    <a href="#">Iniciar Sesión</a>
+                    <a href="suscribirse.html">Suscríbete</a>
+                </div>
             </div>
         </div>
     </nav>
         <!-- Encabezado decorativo de la sección -->
         <div class="seccion-titulo">
             <div class="barra-lateral"></div>
-            <h2 class="tituloBarra">Nuestros Certificados</h2>
+            <h2 class="tituloBarra">Certificados</h2>
             <div class="barra-lateral"></div>
           </div>
             <!-- Hasta aqui llega el codigo que deben pegar en sus codigos aqui abajo va el contenido de cada pagina -->
@@ -69,9 +71,9 @@
       
           <!-- Tarjeta 1 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)"> 
-            <img src="https://i.imgur.com/HNoS2eN.png" alt="Certificado FairTrade">
+            <img src="imagenes/Nosotros/Certificados/certifiacion01.png" alt="Certificado FairTrade">
             <p>
-              Esta receta de cestitas rellenas es una manera sana y deliciosa de comer aguacate. ¡Además, se tarda poco más de media hora en hacer!
+              
             </p>
             <div class="detalles">
               <p>
@@ -82,9 +84,9 @@
       
           <!-- Tarjeta 2 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)">
-            <img src="https://i.imgur.com/v0gTTDd.png" alt="Certificado NTC">
+            <img src="imagenes/Nosotros/Certificados/certifiacion02.png" alt="Certificado NTC">
             <p>
-              Hay poca gente a la que no le guste el guacamole y más este con matices de queso. ¡Está delicioso!
+              
             </p>
             <div class="detalles">
               <p>
@@ -95,9 +97,9 @@
       
           <!-- Tarjeta 3 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)">
-            <img src="https://i.imgur.com/4iQtsw9.png" alt="Certificado FairTrage">
+            <img src="imagenes/Nosotros/Certificados/certifiacion03.png" alt="Certificado FairTrage">
             <p>
-              Si no sabes cómo aprovechar algunas almendras, esta receta de aguacate te encantará.
+             
             </p>
             <div class="detalles">
               <p>
@@ -108,8 +110,8 @@
       
           <!-- Tarjeta 4 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)">
-            <img src="https://i.imgur.com/EUsowTG.png" alt="Certificado Organic Product">
-            <p>El ceviche es uno de los platos más típicos, y con aguacate se vuelve aún mejor.</p>
+            <img src="imagenes/Nosotros/Certificados/certifiacion04.png" alt="Certificado Organic Product">
+            <p></p>
             <div class="detalles">
               <p>
                 El certificado <strong>Organic Product</strong> respalda que nuestros aguacates son cultivados sin pesticidas ni químicos sintéticos, cumpliendo con normativas internacionales de agricultura orgánica.
@@ -119,8 +121,8 @@
       
           <!-- Tarjeta 5 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)">
-            <img src="https://i.imgur.com/wO72WWK.png" alt="Certificado Organic">
-            <p>Una copa de tomate, aguacate y pipas de girasol: sencilla y saludable.</p>
+            <img src="imagenes/Nosotros/Certificados/certifiacion05.png" alt="Certificado Organic">
+            <p></p>
             <div class="detalles">
               <p>
                 Este <strong>Certificado Organic</strong> garantiza que nuestros cultivos siguen prácticas sostenibles, amigables con el suelo y con una producción natural libre de organismos genéticamente modificados (OGM).
@@ -130,8 +132,8 @@
       
           <!-- Tarjeta 6 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)">
-            <img src="https://i.imgur.com/5yybL3j.png" alt="Certificado Planet Friendly">
-            <p>El aguacate y el salmón son una combinación difícil de superar.</p>
+            <img src="imagenes/Nosotros/Certificados/certifiacion06.png" alt="Certificado Planet Friendly">
+            <p></p>
             <div class="detalles">
               <p>
                 El certificado <strong>Planet Friendly</strong> reconoce que nuestra cadena de producción reduce significativamente la huella de carbono y el uso de agua, protegiendo la biodiversidad local.
@@ -141,8 +143,8 @@
       
           <!-- Tarjeta 7 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)">
-            <img src="https://i.imgur.com/NwjTSQ2.png" alt="Certificado Global">
-            <p>El tartar con salmón marinado y aguacate es siempre un acierto.</p>
+            <img src="imagenes/Nosotros/Certificados/certifiacion07.png" alt="Certificado Global">
+            <p></p>
             <div class="detalles">
               <p>
                 El certificado <strong>Global</strong> indica reconocimiento internacional en prácticas agrícolas responsables y sostenibles, alineadas con las buenas prácticas agrícolas (GAP).
@@ -152,8 +154,8 @@
       
           <!-- Tarjeta 8 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)">
-            <img src="https://i.imgur.com/8Swh1AY.png" alt="Certificado Rainforest Alliance">
-            <p>Una pasta con aguacate puede ser la solución perfecta para tus almuerzos.</p>
+            <img src="imagenes/Nosotros/Certificados/certifiacion08.png" alt="Certificado Rainforest Alliance">
+            <p></p>
             <div class="detalles">
               <p>
                 El certificado <strong>Rainforest Alliance</strong> garantiza que nuestros productos provienen de fincas que respetan los ecosistemas tropicales, la vida silvestre y las condiciones laborales dignas.
@@ -163,8 +165,8 @@
       
           <!-- Tarjeta 9 -->
           <div class="tarjeta-certificados" onclick="toggleDetalle(this)">
-            <img src="https://i.imgur.com/KzXp0kl.png" alt="Certificado Global GAP">
-            <p>Una tortilla de patatas con aguacate: innovación y sabor.</p>
+            <img src="imagenes/Nosotros/Certificados/certifiacion09.png" alt="Certificado Global GAP">
+            <p></p>
             <div class="detalles">
               <p>
                 El <strong>Global GAP</strong> es uno de los certificados más reconocidos mundialmente que respalda la seguridad alimentaria, la trazabilidad y el manejo ambiental de nuestras plantaciones.
@@ -181,31 +183,31 @@
           
           <!-- Bloque de enlaces organizados en dos columnas -->
           <div class="footer-links">
-              <ul>
-                <li><a href="paginaprincipal.html">Inicio</a></li>
-                <li><a href="nosotros_certificados.html">Certificados de Calidad</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nuestraempresa.html">Nuestra Empresa</a></li>
-              </ul>
-              <ul>
-                <li><a href="recetas.html">Recetas</a></li>
-                <li><a href="comercializacion.html">Comercialización</a></li>
-                <li><a href="contactanos.html">Contacto</a></li>
-              </ul>
-            </div>
-        
-            <!-- Otros bloques del footer -->
-            <div class="footer-branding">
-              <h3>BuenAguacate</h3>
-              <p>Empresa Colombiana de Aguacates</p>
-            </div>
-        
-            <div class="footer-subscribe">
-              <button id="boton-suscribirse">Suscríbete</button>
-            </div>
-        
+            <ul>
+              <li><a href="paginaprincipal.html">Inicio</a></li>
+              <li><a href="nosotros_certificados.html">Certificados de Calidad</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="nuestraempresa.html">Nuestra Empresa</a></li>
+            </ul>
+            <ul>
+              <li><a href="recetas.html">Recetas</a></li>
+              <li><a href="comercializacion.html">Comercialización</a></li>
+              <li><a href="contactanos.html">Contacto</a></li>
+            </ul>
           </div>
-        </footer>
+      
+          <!-- Otros bloques del footer -->
+          <div class="footer-branding">
+            <h3>BuenAguacate</h3>
+            <p>Empresa Colombiana de Aguacates</p>
+          </div>
+      
+          <div class="footer-subscribe">
+            <button id="boton-suscribirse">Suscríbete</button>
+          </div>
+      
+        </div>
+      </footer>
       
 </body>
 </html>
