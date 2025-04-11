@@ -216,42 +216,6 @@ body {
 
 }
 /* Aqui finaliza la barra de navegacion para cada pagina */
-  
-  
-  /* Imagen hero ocupando pantalla */
-  .hero {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 180px); /* Resta el espacio del header y footer */
-    overflow: hidden;
-  }
-  
-  .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Botones de navegación del carrusel */
-  .boton-carrusel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  
-  .boton-carrusel.izq {
-    left: 20px;
-  }
-  
-  .boton-carrusel.der {
-    right: 20px;
-  }
 
   /* Footer el style del footer */
 footer {
@@ -411,4 +375,40 @@ footer {
 }
 /* hasta aqui va el footer y la barra divisora */
 
-  
+.carrusel {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.izquierda {
+  left: 10px;
+}
+
+.derecha {
+  right: 10px;
+}
