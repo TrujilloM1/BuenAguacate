@@ -210,6 +210,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
       
+      // Verifica que el botón exista antes de asignar el evento
+      if (borrarTodoBtn) {
+        borrarTodoBtn.addEventListener("click", () => {
+          carrito.length = 0; // Vacía el carrito
+          actualizarResumen(); // Actualiza el resumen para reflejar los cambios
+          alert("El carrito ha sido vaciado."); // Mensaje opcional
+        });
+      }
+      
       comprarTodoBtn.addEventListener("click", () => {
         if (carrito.length === 0) {
           alert("No hay productos en el resumen de compra.");
