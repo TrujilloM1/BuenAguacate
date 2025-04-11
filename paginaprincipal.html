@@ -6,7 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BuenAguacate - Inicio</title>
+        <title>BuenAguacate - Recetas</title>
         <link rel="stylesheet" href="paginaprincipal.css">
         <script src="paginaprincipal.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,55 +18,52 @@
       <!-- Encabezado superior con logo y texto -->
       <header class="encabezado-superior">
         <div class="contenedor-logo-texto">
-            <img src="imagenes/LogoBuenaguacate.png" alt="Logo BuenAguacate" class="logo-superior">
+            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
             <h1 class="titulo-principal">BuenAguacate</h1>
         </div>
     </header>
 
     <!-- Barra de navegación -->
     <nav class="navbar">
-      <div class="navbar-content">
-        <div class="nav-links">
-            <a href="paginaprincipal.html" class="nav-link">Inicio</a>
-            <a href="productos.html" class="nav-link">Productos</a>
-            <a href="recetas.html" class="nav-link">Recetas</a>
-            <div class="nav-dropdown">
-                <a href="#" class="nav-link dropdown-btn">Nosotros</a>
-                <div class="dropdown-content">
-                    <a href="nosotros_certificados.html">Certificados de Calidad</a>
-                    <a href="nuestraempresa.html">Nuestra Empresa</a>
-                    <a href="comercializacion.html">Comercialización</a>
-                </div>
-            </div>
-            <a href="contactanos.html" class="nav-link">Contacto</a>
-            
-        </div>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      <div class="nav-left">
+          
+          <a href="paginaprincipal.html" class="nav-link">Inicio</a>
+          <a href="productos.html" class="nav-link">Productos</a>
+          <a href="recetas.html" class="nav-link">Recetas</a>
+          <div class="nav-dropdown">
+              <a href="#" class="nav-link dropdown-btn">Nosotros</a>
+              <div class="dropdown-content">
+                  <a href="nosotros_certificados.html">Certificados de Calidad</a>
+                  <a href="nuestraempresa.html">Nuestra Empresa</a>
+                  <a href="comercializacion.html">Comercialización</a>
+              </div>
+          </div>
+          <a href="contactanos.html" class="nav-link">Contacto</a>
+      </div>
         
         <!-- Menú de usuario -->
+        <div class="nav-right">
             <div class="user-dropdown">
                 <button class="user-btn">
-                  <img src="imagenes/LogoUser.jpg" alt="Logo user-btn" class="LogoUser">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
+                        <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
+                        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
+                    </svg>
                 </button>
                 <div class="user-menu">
-                    <a href="#">Iniciar Sesión</a>
-                    <a href="suscribirse.html">Suscríbete</a>
-                </div>
+                  <a href="#">Iniciar Sesión</a>
+                  <a href="suscribirse.html">Suscríbete</a>
+              </div>
             </div>
         </div>
     </nav>
        
 
-  <!-- Carrusel / Hero -->
-  <section class="hero">
-    <img id="imagen-hero" src="https://i.imgur.com/bboNtNz.jpeg" alt="Imagen de aguacate">
-    <button class="boton-carrusel izq" onclick="cambiarImagen(-1)">❮</button>
-    <button class="boton-carrusel der" onclick="cambiarImagen(1)">❯</button>
-  </section>
+    <section class="carrusel">
+      <button class="carrusel-btn izquierda">◀</button>
+      <img id="imagen-hero" src="img-inicio/aguacate01.jpeg" alt="Imagen carrusel">
+      <button class="carrusel-btn derecha">▶</button>
+    </section>
 
   <!-- Aqui inicia el footer -->
   <footer>
@@ -83,7 +80,7 @@
         <ul>
           <li><a href="recetas.html">Recetas</a></li>
           <li><a href="comercializacion.html">Comercialización</a></li>
-          <li><a href="contactanos.html">Contacto</a></li>
+          <li><a href="contactenos.html">Contacto</a></li>
         </ul>
       </div>
   
@@ -98,7 +95,6 @@
       </div>
   
     </div>
-  </footer>
-  
+      </footer>
 </body>
 </html>

@@ -1,87 +1,76 @@
-<script>
+// Mostrar/ocultar menú del usuario
 document.addEventListener("DOMContentLoaded", function () {
-  // --- MENÚ USUARIO ---
-  const userBtn = document.querySelector('.user-btn');
-  const userMenu = document.querySelector('.user-menu');
+    const userBtn = document.querySelector('.user-btn');
+    const userMenu = document.querySelector('.user-menu');
 
-  if (userBtn && userMenu) {
     userBtn.addEventListener('click', function () {
-      userMenu.classList.toggle('show');
+        userMenu.classList.toggle('show');
     });
 
+    // Cerrar el menú si se hace clic fuera
     window.addEventListener('click', function (e) {
-      if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
-        userMenu.classList.remove('show');
-      }
-    });
-  }
+        if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
+            userMenu.classList.remove('show');
+        }
+    });
 
-  // --- MENÚ HAMBURGUESA ---
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+const imagenHero = document.getElementById("imagen-hero");
+const btnIzquierda = document.querySelector(".carrusel-btn.izquierda");
+const btnDerecha = document.querySelector(".carrusel-btn.derecha");
 
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    });
+const imagenes = [
+  "img-inicio/aguacate01.jpeg",
+  "img-inicio/aguacate02.jpeg",
+  "img-inicio/aguacate03.jpeg",
+  "img-inicio/aguacate04.jpeg",
+  "img-inicio/aguacate05.jpeg",
+  "img-inicio/aguacate06.jpeg"
+];
 
-    window.addEventListener('click', function (e) {
-      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-      }
-    });
-  }
+let indiceActual = 0;
 
-  // --- DROPDOWN DE NAVEGACIÓN ---
-  const dropdownBtn = document.querySelector(".dropdown-btn");
-  const navDropdown = document.querySelector(".nav-dropdown");
+function mostrarImagen(indice) {
+  imagenHero.src = imagenes[indice];
+}
 
-  if (dropdownBtn && navDropdown) {
-    dropdownBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      navDropdown.classList.toggle("show");
-    });
+btnIzquierda.addEventListener("click", () => {
+  indiceActual = (indiceActual - 1 + imagenes.length) % imagenes.length;
+  mostrarImagen(indiceActual);
+});
 
-    window.addEventListener("click", function (event) {
-      if (!dropdownBtn.contains(event.target) && !navDropdown.contains(event.target)) {
-        navDropdown.classList.remove("show");
-      }
-    });
-  }
+btnDerecha.addEventListener("click", () => {
+  indiceActual = (indiceActual + 1) % imagenes.length;
+  mostrarImagen(indiceActual);
+});
 
-  // --- BOTÓN DE SUSCRIPCIÓN ---
-  const botonSuscribirse = document.getElementById('boton-suscribirse');
-  if (botonSuscribirse) {
+
+//  Funcionalidad del botón "Suscríbete"
+const botonSuscribirse = document.getElementById('boton-suscribirse');
+if (botonSuscribirse) {
     botonSuscribirse.addEventListener('click', () => {
-      window.location.href = 'suscribirse.html';
+        window.location.href = 'suscribirse.html'; // Reemplaza con tu ruta real
     });
-  }
-
-  // --- CARRUSEL DE IMÁGENES HERO ---
-  const imagenes = [
-    "https://i.imgur.com/bboNtNz.jpeg",
-    "https://i.imgur.com/WkMRy5R.png",
-    "https://i.imgur.com/2uoELeb.jpeg",
-    "https://i.imgur.com/3AC3TJw.jpeg",
-    "https://i.imgur.com/LVUhEfS.jpeg",
-    "https://i.imgur.com/fOklekx.jpeg"
-  ];
-  let indice = 0;
-
-  window.cambiarImagen = function (direccion) {
-    indice = (indice + direccion + imagenes.length) % imagenes.length;
-    const heroImg = document.getElementById("imagen-hero");
-    if (heroImg) heroImg.src = imagenes[indice];
-  };
+}
 });
 
-// --- EFECTO SCROLL EN NAVBAR ---
-window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
-  if (navbar) {
-    navbar.classList.toggle("scrolled", window.scrollY > 0);
-  }
+
+
+// Mostrar/ocultar menú del usuario
+document.addEventListener("DOMContentLoaded", function () {
+const userBtn = document.querySelector('.user-btn');
+const userMenu = document.querySelector('.user-menu');
+
+userBtn.addEventListener('click', function () {
+    userMenu.classList.toggle('show');
 });
-</script>
+
+// Cerrar el menú si se hace clic fuera
+window.addEventListener('click', function (e) {
+    if (!userBtn.contains(e.target) && !userMenu.contains(e.target)) {
+        userMenu.classList.remove('show');
+    }
+    });
+
+});
+
+  
