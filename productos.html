@@ -11,42 +11,44 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
     </head>
-<body>
+    <body>
 
       <!-- Encabezado superior con logo y texto -->
       <header class="encabezado-superior">
         <div class="contenedor-logo-texto">
-            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
+            <img src="imagenes/LogoBuenaguacate.png" alt="Logo BuenAguacate" class="logo-superior">
             <h1 class="titulo-principal">BuenAguacate</h1>
         </div>
     </header>
 
     <!-- Barra de navegación -->
     <nav class="navbar">
-      <div class="nav-left">
-          
-          <a href="paginaprincipal.html" class="nav-link">Inicio</a>
-          <a href="productos.html" class="nav-link">Productos</a>
-          <a href="recetas.html" class="nav-link">Recetas</a>
-          <div class="nav-dropdown">
-              <a href="#" class="nav-link dropdown-btn">Nosotros</a>
-              <div class="dropdown-content">
-                  <a href="nosotros_certificados.html">Certificados de Calidad</a>
-                  <a href="nuestraempresa.html">Nuestra Empresa</a>
-                  <a href="comercializacion.html">Comercialización</a>
-              </div>
-          </div>
-          <a href="contactanos.html" class="nav-link">Contacto</a>
-        </div>
+      <div class="navbar-content">
+        <div class="nav-links">
+            <a href="paginaprincipal.html" class="nav-link">Inicio</a>
+            <a href="productos.html" class="nav-link">Productos</a>
+            <a href="recetas.html" class="nav-link">Recetas</a>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-link dropdown-btn">Nosotros</a>
+                <div class="dropdown-content">
+                    <a href="nosotros_certificados.html">Certificados de Calidad</a>
+                    <a href="nuestraempresa.html">Nuestra Empresa</a>
+                    <a href="comercializacion.html">Comercialización</a>
+                </div>
+            </div>
+            <a href="contactanos.html" class="nav-link">Contacto</a>
+            
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         
         <!-- Menú de usuario -->
-        <div class="nav-right">
             <div class="user-dropdown">
                 <button class="user-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
-                        <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
-                        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
-                    </svg>
+                  <img src="imagenes/LogoUser.jpg" alt="Logo user-btn" class="LogoUser">
                 </button>
                 <div class="user-menu">
                     <a href="#">Iniciar Sesión</a>
@@ -54,51 +56,72 @@
                 </div>
             </div>
         </div>
-    </nav>
+  </nav>
         <!-- Encabezado decorativo de la sección -->
         <div class="seccion-titulo">
             <div class="barra-lateral"></div>
-            <h2 class="tituloBarra">Productos</h2>
+            <h2 class="tituloBarra">Recetas</h2>
             <div class="barra-lateral"></div>
           </div>
-          <section class="contenedor-productos">
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/yS6M5l7.jpeg" alt="Aguacate Hass Jumbo">
-              <h3>AGUACATE HASS<br><span>JUMBO</span></h3>
-              <p>+230 gr<br>$ 25.000 kg</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/JujfgR4.jpeg" alt="Aguacate Hass Primera">
-              <h3>AGUACATE HASS<br><span>PRIMERA</span></h3>
-              <p>170 gr a 229 gr<br>$ 20.000 kg</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/XDpYbbX.jpeg" alt="Aguacate Hass Segunda">
-              <h3>AGUACATE HASS<br><span>SEGUNDA</span></h3>
-              <p>130 gr a 169 gr<br>$ 15.000 kg</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/997a4jr.png" alt="Aguacate Hass Segunda">
-              <h3>AGUACATE HASS<br><span>TERCERA</span></h3>
-              <p>-129 gr<br>$ 10.000 kg</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/xcASE9U.png" alt="Aguacate Hass Segunda">
-              <h3>GUACAMOLE<br><span>HASS</span></h3>
-              <p>100gr<br>$  5.000</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/7fXRR1u.png" alt="Aguacate Hass Segunda">
-              <h3>ACEITE<br><span>DE AGUACATE</span></h3>
-              <p>50ml<br>$  50.000</p>
-            </div>
-        
-          </section>
+    <!-- Tarjetas de productos -->
+    <div class="contenedor-productos">
+    <div class="tarjeta" data-nombre="AGUACATE HASS JUMBO" data-precio="25000" data-tipo="kg" data-peso-aprox="250">
+      <img src="imagenes/Productos/jumbo.jpeg" alt="Aguacate Hass Jumbo">
+      <h3>AGUACATE HASS<br><span>JUMBO</span></h3>
+      <p>+230 gr<br>$ 25.000 kg</p>
+      <div class="acciones"></div>
+    </div>
+
+    <div class="tarjeta" data-nombre="AGUACATE HASS PRIMERA" data-precio="20000" data-tipo="kg" data-peso-aprox="200">
+      <img src="imagenes/Productos/primera.jpg" alt="Aguacate Hass Primera">
+      <h3>AGUACATE HASS<br><span>PRIMERA</span></h3>
+      <p>170 gr a 229 gr<br>$ 20.000 kg</p>
+      <div class="acciones"></div>
+    </div>
+
+    <div class="tarjeta" data-nombre="AGUACATE HASS SEGUNDA" data-precio="15000" data-tipo="kg" data-peso-aprox="150">
+      <img src="imagenes/Productos/segunda.jpg" alt="Aguacate Hass Segunda">
+      <h3>AGUACATE HASS<br><span>SEGUNDA</span></h3>
+      <p>130 gr a 169 gr<br>$ 15.000 kg</p>
+      <div class="acciones"></div>
+    </div>
+
+    <div class="tarjeta" data-nombre="AGUACATE HASS TERCERA" data-precio="10000" data-tipo="kg" data-peso-aprox="120">
+      <img src="imagenes/Productos/tercera.png" alt="Aguacate Hass Tercera" />
+      <h3>AGUACATE HASS<br><span>TERCERA</span></h3>
+      <p>-129 gr<br>$ 10.000 kg</p>
+      <div class="acciones"></div>
+    </div>
+
+    <div class="tarjeta" data-nombre="GUACAMOLE HASS" data-precio="4000" data-tipo="unidad" data-cantidad-unidad="200">
+      <img src="imagenes/Productos/guacamole.png" alt="Guacamole Hass" />
+      <h3>GUACAMOLE<br><span>HASS</span></h3>
+      <p>200gr por recipiente<br>$ 4.000</p>
+      <div class="acciones"></div>
+    </div>
+    
+    <div class="tarjeta" data-nombre="ACEITE DE AGUACATE" data-precio="14000" data-tipo="unidad" data-cantidad-unidad="200">
+      <img src="imagenes/Productos/aceite.png" alt="Aceite de Aguacate" />
+      <h3>ACEITE<br><span>DE AGUACATE</span></h3>
+      <p>200ml por botella<br>$ 14.000</p>
+      <div class="acciones"></div>
+    </div>
+  </div>
+  </section>
+
+  <!-- Resumen de compra -->
+  <section id="resumen-compra">
+    <div class="contenedor-resumen">
+      <h2>Resumen de compra</h2>
+      <div id="lista-compra"></div>
+      <div id="total-compra" class="total-compra"></div>
+      <div class="resumen-acciones">
+        <button onclick="window.location.href='pago.html'">Comprar todo</button>
+
+        <button id="borrar-todo">Borrar todo</button>
+      </div>
+    </div>
+  </section>
    <!-- Aqui inicia el footer -->
    <footer>
     <div class="footer-container">
@@ -130,6 +153,6 @@
   
     </div>
   </footer>
-       <!-- Hasta aqui va el footer -->
+  
 </body>
 </html>
