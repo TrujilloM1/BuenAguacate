@@ -1,3 +1,4 @@
+<!-- Aqui inicia lo que deben pegar en sus codigos para el header, footer y barra divisora -->
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -15,15 +16,15 @@
       <!-- Encabezado superior con logo y texto -->
       <header class="encabezado-superior">
         <div class="contenedor-logo-texto">
-            <img src="https://i.imgur.com/p1um6vg.png" alt="Logo BuenAguacate" class="logo-superior">
+            <img src="imagenes/LogoBuenaguacate.png" alt="Logo BuenAguacate" class="logo-superior">
             <h1 class="titulo-principal">BuenAguacate</h1>
         </div>
     </header>
 
     <!-- Barra de navegación -->
     <nav class="navbar">
-        <div class="nav-left">
-            
+      <div class="navbar-content">
+        <div class="nav-links">
             <a href="paginaprincipal.html" class="nav-link">Inicio</a>
             <a href="productos.html" class="nav-link">Productos</a>
             <a href="recetas.html" class="nav-link">Recetas</a>
@@ -36,16 +37,18 @@
                 </div>
             </div>
             <a href="contactanos.html" class="nav-link">Contacto</a>
+            
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         
         <!-- Menú de usuario -->
-        <div class="nav-right">
             <div class="user-dropdown">
                 <button class="user-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="white">
-                        <circle cx="12" cy="8" r="4" stroke="black" stroke-width="1.5"/>
-                        <path d="M4 20c0-4 4-7 8-7s8 3 8 7" stroke="black" stroke-width="1.5" fill="none"/>
-                    </svg>
+                  <img src="imagenes/LogoUser.jpg" alt="Logo user-btn" class="LogoUser">
                 </button>
                 <div class="user-menu">
                     <a href="#">Iniciar Sesión</a>
@@ -60,64 +63,249 @@
             <h2 class="tituloBarra">Recetas</h2>
             <div class="barra-lateral"></div>
           </div>
+            <!-- Hasta aqui llega el codigo que deben pegar en sus codigos aqui abajo va el contenido de cada pagina -->
     <!-- Sección de Recetas -->
     <section class="seccion-recetas">
         <div class="contenedor-recetas">
 
 
             <!-- Tarjeta 1 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/UUYnLAX.png" alt="Cestitas rellenas con aguacate">
-                <p>
-                    Esta receta de cestitas rellenas es una manera sana y deliciosa de comer aguacate. Puedes hacerlos para la cena o como aperitivo en una comida. ¡Además, se tarda poco más de media hora en hacer!
-                </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta1Cesta.png" alt="Cestitas de jamón y aguacate">
+                <p>Esta receta de cestitas rellenas es una manera sana y deliciosa de comer aguacate. Puedes hacerlos para la cena o como aperitivo en una comida. ¡Además, se tarda poco más de media hora en hacer!</p>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>4 láminas de pasta/masa filo</li>
+                    <li>400 g de lomo de salmón </li>
+                    <li>2 aguacates</li>
+                    <li>12 tomatitos cherry</li>
+                    <li>1 cebolla morada</li>
+                    <li>1 limón</li>
+                    <li>Mantequilla</li>
+                    <li>Aceite de oliva</li>
+                    <li>Pimienta negra </li>
+                    <li>Sal al gusto</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                    <P><strong>Paso 1.</strong> Precalienta el horno a 180º. De mientras, Pincela las láminas de pasta con un poco de mantequilla fundida en el microondas. </P>
+                    <P><strong>Paso 2.</strong> Corta cada lámina en dos partes, dóblalas por la mitad y forra con ellas un molde con forma de tartaleta. </P>
+                    <P><strong>Paso 3.</strong> Mete los moldes con la masa en el horno durante 15 minutos y retíralos. Exprime el limón y mezcla la mitad del zumo con tres cucharaditas de sal, aceite y pimienta. También lava el salmón y córtalo en daditos. Cuécelos durante 8 minutos y déjalos enfriar.  </P>
+                    <P><strong>Paso 4.</strong>. Pela la cebolla morada y córtala. Haz lo mismo con los tomates, y corta cada cherry por la mitad. El aguacate, también por la mitad; quítale el hueso y extrae la pulpa. Retírala, trocéala y añade un poco de limón. </P>
+                    <P><strong>Paso 5.</strong> Mezcla todos los ingredientes en un recipiente y añade el salmón (si quieres, vuelve añadir un toque de limón). Cuando todo esté bien mezclado, repártelo entre cada tartaleta.  </P>
+                 
+                  
+                </div>
+              </div>
             <!-- Tarjeta 2 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/9g03BfD.png" alt="Guacamole con queso">
-                <p>
-                    Hay poca gente a la que no le guste el guacamole y más este con matices de queso. ¡Está delicioso! Con esta receta acompañada de verduritas, ¡no fallarás!
-                </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta2Guacamole.png" alt="Crudités con dip de aguacate y queso">
+                <p>Hay poca gente a la que no le guste el guacamole y más este con matices de queso. ¡Está delicioso! Con esta receta acompañada de verduritas, ¡no fallarás! </p>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>Medio pimiento rojo</li>
+                    <li>Medio pimiento amarillo </li>
+                    <li>2 zanahorias</li>
+                    <li>1 apio</li>
+                    <li>2 panes de pita</li>
+                    <li>2 aguacates</li>
+                    <li>100 g de queso feta</li>
+                    <li>Media cebolla</li>
+                    <li>1 diente de ajo </li>
+                    <li>2 ramitas de cilantro</li>
+                    <li>1 lima</li>
+                    <li>1 pizca de guindilla </li>
+                    <li>Sal y pimienta al gusto</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                    <P><strong>Paso 1.</strong> Limpia los pimientos y el apio y pela las zanahorias.  Lava todas las verduras y córtalas en bastones. También corta el pan de pita en tiras.  </P>
+                    <P><strong>Paso 2.</strong> Pela el ajo y la cebolla y pícalos. Los aguacates, pártelos por la mitad y quítales el hueso. Lava la pulpa y añádele una pizca de cilantro. </P>
+                    <P><strong>Paso 3.</strong> Mezcla el aguacate con ajo, cebolla, queso troceado, cilantro y el zumo de la lima. Si quieres, espolvorea un poco de guindilla y mezcla. ¡Listo para servir! </P>
+                </div>
+              </div>
             <!-- Tarjeta 3 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/5nfze7h.png" alt="Aderezo de aguacate">
-                <p>
-                    Si no sabes cómo aprovechar algunas almendras, esta receta de aguacate te encantará. ¡Nada mejor que algo fresco y original para comer!
-                </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta3Aderezo.png" alt="Crema fresca de almendra y aguacate">
+                <p>Si nos sabes como aprovechar algunas almendras, esta receta de aguacate te encantará. ¡Nada mejor que algo fresco y original para comer!</p>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>1 aguacate</li>
+                    <li>3 dientes de ajo </li>
+                    <li>80 gramos de almendras</li>
+                    <li>1 limón</li>
+                    <li>6 rebanadas de pan de molde</li>
+                    <li>3 lonchas de cecina</li>
+                    <li>Medio vaso de aceite de oliva</li>
+                    <li>Sal y menta al gusto</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                  <P><strong>Paso 1.</strong> Pela el aguacate, pártelo por la mitad, extrae el hueso y corta la pulpa en trocitos. Coge el limón y pártelo por la mitad. Exprime un poco sobre el aguacate para que no se oxide. </P>
+                  <P><strong>Paso 2.</strong> Bate el aguacate junto con las almendras, los ajos y el aceite. Sazona y añade unos trocitos de menta. </P>
+                  <P><strong>Paso 3.</strong> Retira la corteza de las rebanadas de pan y trocéalas. Incorpóralas junto con 3 vasos de agua. Luego, tritura todo hasta que obtengas una pasta homogénea. </P>
+                  <P><strong>Paso 4.</strong>. Cuando quede una textura tipo crema, ajusta la sal si es necesario y viértela en un recipiente. Tápalo con papel film y déjalo reposar en la nevera. </P>
+                  <P><strong>Paso 5.</strong> Trocea la cecina y caliéntala en el microondas a potencia media, durante 2 minutos. Déjala enfriar.  </P>
+                  <P><strong>Paso 6.</strong> Coge la crema, caliéntala un poco y repártela en cuencos. Espolvorea la cecina por encima.   </P>
+                </div>
+              </div>
             <!-- Tarjeta 4 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/dNBHV1t.png" alt="Ceviche de aguacate">
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta4.png" alt="Ceviche de champiñones y aguacate">
                 <p>El ceviche es uno de los platos más típicos de la gastronomía de varios países como Perú o Chile. Para convertirlo en una receta de aguacate, tan solo necesitas champiñones y alguna cosilla más. ¡Descúbrelas!</p>
-            </div>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>450 g de champiñones</li>
+                    <li>1 aguacate </li>
+                    <li>10 ml de zumo de limón</li>
+                    <li>Chili (picante al gusto)</li>
+                    <li>20 g de apio</li>
+                    <li>2 dientes de ajo</li>
+                    <li>1 puñado de cilantro</li>
+                    <li>45 ml de aceite de oliva</li>
+                    <li>1 puñado de germinado de remolacha</li>
+                    <li>1 puñado de rúcula</li>
+                    <li>1 cdta. de sal </li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                  <P><strong>Paso 1.</strong> Lava y corta en rodajas los champiñones y macéralos durante una hora junto al zumo de limón, el ajo triturado, el apio, el cilantro, el aceite y a sal. </P>
+                  <P><strong>Paso 2.</strong> Una vez macerados, mézclalo con aguacate cortado en daditos y sírvelo como un timbal. </P>
+                  <P><strong>Paso 3.</strong> Puedes decorar el timbal añadiendo arriba unas hojas de rúcula con los germinados de remolacha.  </P>
+                </div>
+              </div>
             <!-- Tarjeta 5 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/REGJ72e.png" alt="Ensalada de aguacate">
-                <p>Si no sabes cómo comer aguacate, o todavía muchas recetas de la mano, puedes empezar por esta copa de tomate, aguacate y pipas de girasol. Es muy fácil y el resultado es verdaderamente bueno. </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta5.png" alt="Aguacate con tomate y pipas de girasol">
+                <p>Si no sabes cómo comer aguacate, o todavía muchas recetas de la mano, puedes empezar por esta copa de tomate, aguacate y pipas de girasol. Es muy fácil y el resultado es verdaderamente bueno. </p>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>2 aguacates</li>
+                    <li>2 cebolletas </li>
+                    <li>300 g de tomates maduros</li>
+                    <li>50 g de pipas de girasol</li>
+                    <li>1 limón</li>
+                    <li>100 ml de aceite de oliva</li>
+                    <li>1 guindilla roja</li>
+                    <li>Sal al gusto</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                    <P><strong>Paso 1.</strong> Lava los tomates, limpia las cebolletas y córtalas. Corta todo en daditos y añade zumo de limón. </P>
+                    <P><strong>Paso 2.</strong> Prepara la vinagreta con una guindilla picadita mezclada con aceite, zumo de limón y sal. </P>
+                    <P><strong>Paso 3.</strong> Corta los aguacates, pártelos por la mitad y quítales el hueso. Corta la pulpa en gajos y rocíalos con el zumo de limón que quede. </P>
+                    <P><strong>Paso 4.</strong>. En una ensaladera, mezcla las cebolletas, tomates, y aguacates, y alíñalos con la vinagreta. Tira unas pipas de girasol por encima y sirve en seguida.  </P>
+                </div>
+              </div>
             <!-- Tarjeta 6 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/jvqkr13.png" alt="Salmon con aguacate">
-                <p>Hay decenas de recetas de aguacate, pero a las que le sumas el salmón, son verdaderamente difíciles de superar. </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta6.png" alt="Receta de salmón con crema de aguacate">
+                <p>Hay decenas de recetas de aguacate, pero a las que le sumas el salmón, son verdaderamente difíciles de superar. </p>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>600 g de filetes de salmón</li>
+                    <li>2 aguacates </li>
+                    <li>1 limón</li>
+                    <li>½ cebolleta</li>
+                    <li>½ diente de ajo</li>
+                    <li>Aceite de oliva</li>
+                    <li>1 cucharada de semillas de sésamo tostado</li>
+                    <li>1 cucharada de semillas de sésamo negro</li>
+                    <li>Sal, pimienta</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                  <P><strong>Paso 1.</strong> Pela y pica la cebolla y el ajo. </P>
+                  <P><strong>Paso 2.</strong> Exprime el limón y cuela su zumo. </P>
+                  <P><strong>Paso 3.</strong> Abre los aguacates por la mitad, elimina el hueso y retira la pulpa. Pon la carne del aguacate en el vaso de la batidora, con la cebolla, el ajo y el zumo de limón, y tritura hasta obtener un puré homogéneo. </P>
+                  <P><strong>Paso 4.</strong>Salpimenta, añade unas gotas de aceite, mezcla y reserva. </P>
+                  <P><strong>Paso 5.</strong> Mezcla en un cuenco los dos tipos de semillas de sésamo. </P>
+                  <P><strong>Paso 6.</strong> Limpiar el salmón, eliminando la piel y las espinas. Lavarlo, secarlo con papel de cocina y cortarlo en dados. Salpimentarlos, rociarlos con unas gotas de aceite y rebozar una de sus caras con las semillas de sésamo. Calentar a fuego lento una sartén untada con aceite; dorar los cubitos de salmón unos segundos por cada lado, comenzando por el de las semillas, y retirarlos.   </P>
+                  <P><strong>Paso 7.</strong> Distribuir en los platos unos montoncitos de puré de aguacate, colocar sobre ellos los dados de salmón y servir. </P>
+                </div>
+              </div>
             <!-- Tarjeta 7 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/W6vwN0K.png" alt="Tarta de aguacate">
-                <p>El tartar es siempre un plato estrella en las cenas, ¡sobre todo si lleva aguacate! Además, con el salmón marinado, lograrás un resultado excepcional. </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta7.png" alt="Tartar de aguacate y salmón marinado">
+                <p>El tartar es siempre un plato estrella en las cenas, ¡sobre todo si lleva aguacate! Además, con el salmón marinado, lograrás un resultado excepcional. </p>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>600 g de salmón en filetes</li>
+                    <li>2 aguacates </li>
+                    <li>3 huevos</li>
+                    <li>50 g de sal</li>
+                    <li>40 g de azúcar</li>
+                    <li>1 manojo de eneldo fresco</li>
+                    <li>1 lima</li>
+                    <li>Aceite de oliva</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                  <P><strong>Paso 1.</strong> El día anterior, limpia bien los filetes de salmón, quita las espinas y cúbrelos con un poco de sal, azúcar y eneldo picado. Tapa con film transparente y deja reposar en la nevera. </P>
+                  <P><strong>Paso 2.</strong> Para hacer las regañás, dispón todos los ingredientes indicados en un cuenco, agrega 35 ml de agua y amasa poco a poco hasta lograr una masa lisa y uniforme. Estira la masa con el rodillo en una lámina que quede lo más fina posible. </P>
+                  <P><strong>Paso 3.</strong> Corta la masa en círculos de unos 12-15 cm de diámetro, colócalos en la bandeja del horno y cuece durante 20-25 minutos a 180°. Introduce los huevos en una cacerolita, cubre con agua, añade una pizca de sal y lleva a ebullición.  </P>
+                  <P><strong>Paso 4.</strong> Luego cuece los huevos unos 10 minutos. Cuando estén hechos los huevos, llévalos bajo el agua del grifo, quita la cáscara y trocea.  </P>
+                  <P><strong>Paso 5.</strong>  Ahora es el turno de los aguacate. Abre los aguacates por la mitad, corta en dados y añade un poco de lima.   </P>
+                  <P><strong>Paso 6.</strong>  Limpia los filetes de salmón con papel absorbente de cocina y córtalos en tiras y luego en daditos. Dispón una regañá en cada plato y coloca un aro encima para rellenarlo con el tartar: añade primero salmón, a continuación el huevo y el aguacate, y termina con otra capa de salmón. </P>
+                  <P><strong>Paso 7.</strong>  Para terminar, decora con unos daditos de aguacate y trocitos de regañá, ¡y listo!   </P>
+                </div>
+              </div>
             <!-- Tarjeta 8 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/du4wHZi.png" alt="Pasta con aguacate">
-                <p>A todos nos gusta la pasta. Entre todas las recetas de aguacate, esta es una de las más sencillas de elaborar: toma nota del siguiente paso por paso porque este plato con aguacate te salvará muchos mediodías. </p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta8.png" alt="Pasta con aguacate y albahaca">
+                <p>A todos nos gusta la pasta. Entre todas las recetas de aguacate, esta es una de las más sencillas de elaborar: toma nota del siguiente paso por paso porque este plato con aguacate te salvará muchos mediodías. </p>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>320 g de macarrones integrales</li>
+                    <li>1 aguacate </li>
+                    <li>50 g de aceitunas negras</li>
+                    <li>Un puñado de hojas de albahaca</li>
+                    <li>1/2 limón</li>
+                    <li>4 cucharadas de aceite de oliva</li>
+                    <li>40 g de queso parmesano</li>
+                    <li>Sal y pimienta</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                  <P><strong>Paso 1.</strong> Pela el aguacate, pártelo por la mitad y retira el hueso. Tritura la pulpa en el vaso de la batidora, junto con el zumo del medio limón, 3 cucharadas de agua, sal y pimienta. </P>
+                  <P><strong>Paso 2.</strong> Prepara el aceite de albahaca. Para ello, lava un puñado de hojas de albahaca y tritúralas con el aceite de oliva y una pizca de sal. </P>
+                  <P><strong>Paso 3.</strong> Corta las aceitunas deshuesadas en rodajas. </P>
+                  <P><strong>Paso 4.</strong> Saca virutas del queso parmesano con ayuda de un pelador y resérvalas. </P>
+                  <P><strong>Paso 5.</strong>  Cuece la pasta en abundante agua salada durante 15 min hasta que esté al dente. Escúrrela bien y disponla en un cuenco grande.  </P>
+                  <P><strong>Paso 6.</strong>  Incorpora la crema de aguacate y remueve unos instantes. </P>
+                  <P><strong>Paso 7.</strong>  Reparte esta preparación en 4 platos llanos, rocíala con el aceite de albahaca, añade las aceitunas y sírvela enseguida decorada con las virutas de queso parmesano.  </P>
+                </div>
+              </div>
             <!-- Tarjeta 9 -->
-            <div class="tarjeta-receta">
-                <img src="https://i.imgur.com/Ki1puhX.png" alt="Huevo poche con aguacate">
-                <p>Si no sabes cómo hacer una tortilla de patatas, o ya te has cansado de la receta tradicional, prueba esta versión más "delicatessen" con aguacate.</p>
-            </div>
+            <div class="tarjeta-receta" onclick="expandirTarjeta(this)">
+                <img src="imagenes/receta9.png" alt="Receta">
+                <p>Si no sabes cómo hacer una tortilla de patatas, o ya te has cansado de la receta tradicional, prueba esta versión más "delicatessen" con aguacate. </p>
+                <div class="informacion-extra">
+                  <h3><strong>Ingredientes</strong></h3>
+                  <ul>
+                    <li>4 patatas</li>
+                    <li>4 huevos </li>
+                    <li>2 cucharadas de vinagre</li>
+                    <li>2 aguacates</li>
+                    <li>Unos tallos de cebollino</li>
+                    <li>Aceite de oliva</li>
+                    <li>Pimienta</li>
+                    <li>Sal</li>
+                  </ul>
+                  <p><strong>Preparación detallada:</strong> </p>
+                  <P><strong>Paso 1.</strong> Pela las patatas, lávalas con agua fría y seca con papel absorbente de cocina. Pasa las patatas por un rallador grueso, y reserva en un cuenco.  </P>
+                  <P><strong>Paso 2.</strong> Condimenta las patatas ralladas con un poco de sal y pimienta, y mezcla. Coge unas cuatro porciones de patata rallada y aplasta con la mano para ir formando tortitas. </P>
+                  <P><strong>Paso 3.</strong> Calienta un fondo de aceite en una sartén, añade una tortita y fríe unos 2 minutos por cada lado, hasta que se dore. Retira cada tortita con la ayuda de una espátula y déjalas escurrir en un plato forrado con papel absorbente. Repite la operación con las tortitas que quedan. </P>
+                  <P><strong>Paso 4.</strong> SPon al fuego una cazuela con abundante agua, una pizca de sal y el vinagre, y lleva a ebullición. Baja la intensidad y haz un remolino en el agua, removiendo con una cuchara de madera. </P>
+                  <P><strong>Paso 5.</strong>  Incorpora los huevos con cuidado, de uno en uno, y cuece durante 3 minutos.  </P>
+                  <P><strong>Paso 6.</strong>  Retira con una espumadera y colócalos en una fuente. </P>
+                  <P><strong>Paso 7.</strong>  Parte los aguacates por la mitad, retira el hueso y córtalos en láminas. Lava el cebollino, deja unos tallos enteros y pica el resto. </P>
+                  <P><strong>Paso 8.</strong>  Distribuye las tortitas en 4 platos y añade encima el aguacate. Corona con los huevos poché y hazles un corte. Espolvorea con sal y pimienta, añade cebollino y sirve enseguida. </P>
+                </div>
+              </div>
         </div>
     </section>
+    <div class="overlay" onclick="cerrarTarjetaExpandida()"></div>
     <footer>
         <div class="footer-container">
           
