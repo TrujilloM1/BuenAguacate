@@ -1,12 +1,12 @@
 /* Aqui inicia el encabezado para cada pagina */
 /* ENCABEZADO SUPERIOR CON LOGO */
 .encabezado-superior {
-    padding: 2vw 0; /* Ajusta el espacio superior e inferior */
-    background-color: #D5FF81; /* Color de fondo del header */
+    background: linear-gradient(to bottom, #f1d092, #f1d092);
+    padding: 5px 0;
     display: flex;
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content:center; /* Centra horizontalmente el contenido */
-    height: 10vw; /* Ajusta la altura relativa al ancho de la pantalla */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .contenedor-logo-texto {
@@ -26,8 +26,8 @@
     font-family: "Agbalumo", system-ui;
     font-weight: 400;
     font-style: normal;
-    color: rgb(83, 47, 18);/* Color del texto */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
 }
 
 /* Adaptabilidad para móviles */
@@ -39,7 +39,8 @@
         width: 40px;
     }
 }
-/* BARRA DE NAVEGACION------------------------------------------------------------------------------------------------------*/
+/* Aqui llega el encabezado para cada pagina */
+
 
 /* Aqui inicia la barra de navegacion para cada pagina */
 body {
@@ -51,48 +52,111 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color:  rgb(83, 47, 18);
-    height:auto;
-    padding: 0 3vw;
+    
+    justify-content: center;
+    background: linear-gradient(90deg,rgb(83, 47, 18));
+    padding: 10px 25px;
+    height: 70px;
+    position: sticky;
+    top: 0;
     display: flex;
-    justify-content: space-between;
-    grid-template-columns: 1fr auto;/* Asegura que el logo y los enlaces ocupen el espacio disponible */
     align-items: center;
-    overflow-x: hidden; /* Activa el scroll horizontal si el contenido excede el ancho */
-    white-space: nowrap; /* Evita que los elementos se envuelvan en varias líneas */
-    overflow:visible; /* Asegúrate de que no recorte contenido */
+    background: linear-gradient(90deg, rgb(83, 47, 18));
+    color: white;
+    z-index: 1000;
+    height: 70px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
 
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-dropdown {
+    position: relative;
 }
 
 /* Enlaces de navegación */
 .nav-links {
     display: flex;
-    align-items:center;
-    justify-content: space-between;
-    flex: 1;
-    gap: 2vw;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Logo */
-.logo {
-    width: 4vw; /* Tamaño relativo al ancho de la pantalla */
-    height: auto;
-    object-fit: contain; /* Mantiene las proporciones de la imagen */
-    max-width: 12vw; /* Limita el tamaño máximo del logo */
+.nav-links li {
+    position: relative;
 }
 
-/* Estilo de los enlaces */
 .nav-link {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.5vw;
-    padding:1vw 2vw;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    padding: 25px 70px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
 }
 
 .nav-link:hover {
-    background-color: rgb(109, 69, 35);/* Cambia el color de fondo al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.nav-link.active {
+    background-color: #D5FF81;
+    color: #532F12;
+    font-weight: bold;
+}
+
+/* Subrayado animado */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Menú Hamburguesa */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 28px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Dropdown */
@@ -101,7 +165,7 @@ body {
     opacity: 1;
   visibility: visible;
 }
-/*Aqui se ajusta el drop de nosotros*/
+
 .dropdown-content {
 
     top: 100%;
@@ -113,42 +177,29 @@ body {
     z-index: 999;
     display: none;
     position: absolute;
-    top: 100%;
     left: 0;
-    background-color:  rgb(109, 69, 35);
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Sombra para el menú desplegable */
-    min-width: 160px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+
 }
 
 .dropdown-content a {
     display: flex;
     color: white;
-    padding: 0.8vw;
+    font-size: 16px;
+    padding: 15px 50px;
     text-decoration: none;
 }
 
 
 
 .dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.3);/* Cambia el color de fondo al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-.nav-dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Botón de usuario */
-.nav-right {
-    display: flex;
-    margin-left: 50px;
-    align-items: center;
-    justify-content: flex-end; /* Asegura que el ícono esté alineado a la derecha */
-    overflow: visible; /* Evita que el contenido se recorte */
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
-
-}
-
+/* Menú de usuario */
 .user-btn {
     background: none;
     border: none;
@@ -161,22 +212,34 @@ body {
 
 .user-menu {
     position: absolute;
-    top: 150%;
+    top: 100%;
+    left: 0;
+    background-color:rgb(83, 47, 18, 0.95);
+    border-radius: 6px;
+    display: none;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 999;
+    display: none;
     right: 0;
-    background-color: rgb(109, 69, 35);
-    border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 160px;
 }
-/* Es para ajustar el drop de usuario*/
+.LogoUser {
+    border-radius: 25px;
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
 .user-menu a {
     background-color: rgba(255,255,255,0.1);
     color: white;
-    padding: 0.8vw;
+    font-size: 14px;
+    padding: 12px 40px;
     display: block;
     text-decoration: none;
 }
-/* drop de usuario*/
+
 .user-menu a:hover {
     background-color: #f1f1f18a;
     color: rgb(255, 255, 255);
@@ -186,38 +249,108 @@ body {
     display: flex;
 }
 
-/* Adaptabilidad para móviles en la barra de navegación */
-@media screen and (max-width: 600px) {
-    .logo {
-        width: 10vw; /* Reduce el tamaño del logo en pantallas pequeñas */
-        max-width: 10vw; /* Limita el tamaño máximo */
+/* Sombra al hacer scroll */
+.scrolled {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
     }
 
-    .user-btn {
-        width: 10vw; /* Igual al tamaño del logo en pantallas pequeñas */
-        max-width: 10vw; /* Limita el tamaño máximo */
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        background-color: rgb(83, 47, 18, 0.95);
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        border-radius: 12px;
+        display: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
-    .user-btn img {
-        width: 100%; /* Asegura que la imagen ocupe todo el espacio del botón */
-        height: 100%;
+    .nav-dropdown {
+        width: 100%;
+        position: relative;
     }
 
-    .navbar {
-        padding: 0 2vw; /* Reduce el padding de la barra de navegación */
+    .dropdown-content,
+  .user-menu {
+    position: absolute;
+    top: 40px; /* Ajusta según el tamaño del botón */
+    width: max-content; /* O un ancho fijo como 140px si lo prefieres */
+    max-width: 90vw;
+    left: -110px;
+    background-color: rgb(83, 47, 18, 0.95);
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  .user-dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 10px;
+}
+
+.nav-dropdown.show .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+.dropdown-content a {
+    padding: 10px 15px;
+    color: white;
+}
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
     }
 
-    .nav-right {
-        margin-left: 0; /* Ajusta el margen para que no se desplace fuera de la pantalla */
+    .nav-links li {
+        text-align: center;
+        padding: 12px 0;
     }
+    .navbar-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+}
 
-    .nav-link {
-        font-size: 3vw; /* Aumenta el tamaño de la fuente de los enlaces */
-        padding: 1vw 1.5vw; /* Reduce el padding de los enlaces */
+/* Animación suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Footer---------------------------------------------------------------------------------------------------*/
+/* Aqui finaliza la barra de navegacion para cada pagina */
+
+
+/* Footer el style del footer */
 footer {
     background-color: rgb(83, 47, 18);
     padding: 10px; /* Reduce el padding */
@@ -295,7 +428,7 @@ footer {
 }
   
 .footer-subscribe button {
-    background-color: rgb(109, 69, 35);
+    background-color: #59a14f;
     color: white;
     font-size: 2.5rem; /* Reduce el tamaño de la fuente */
     padding: 25px 70px; /* Reduce el padding */
@@ -344,7 +477,7 @@ footer {
     font-weight: 400;
     font-style: normal;
     color: white;
-    text-shadow: 2px 2px 5px #888;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
     margin: 0;
   }
   
@@ -373,7 +506,7 @@ footer {
       text-align: center;
     }
   }
-
+  /* hasta aqui va el footer y la barra divisora */
 /* -------------------------------- */
 /*    GALERÍA SCROLL HORIZONTAL     */
 /* -------------------------------- */
