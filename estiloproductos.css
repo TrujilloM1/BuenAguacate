@@ -362,14 +362,8 @@ footer {
     text-align: center;
   }
 }
-/* hasta aqui va el footer y la barra divisora */
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #D5FF81;
-}
-
+/* -------------------- CONTENEDOR DE PRODUCTOS -------------------- */
 .contenedor-productos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -379,6 +373,7 @@ body {
   padding: 50px 30px;
 }
 
+/* -------------------- TARJETAS DE PRODUCTO -------------------- */
 .tarjeta {
   background-color: #fff;
   border-radius: 15px;
@@ -418,4 +413,114 @@ body {
   margin: 5px 0 15px;
   font-size: 0.95rem;
   color: #444;
+}
+
+.tarjeta button {
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tarjeta button:hover {
+  background-color: #45a049;
+}
+
+/* -------------------- ESTILOS DE INPUTS DINÁMICOS (unidad/kilos) -------------------- */
+.opciones-cantidad {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.opciones-cantidad input {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* -------------------- RESUMEN DE COMPRA -------------------- */
+.contenedor-resumen {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px auto; /* Centra el contenedor horizontalmente */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  max-width: 800px; /* Limita el ancho máximo del contenedor */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Agrega una sombra para resaltar */
+}
+
+.resumen-compra h2 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center; /* Centra el título */
+  margin-bottom: 20px;
+}
+
+#lista-compra {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-resumen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-resumen span {
+  font-weight: bold;
+}
+
+.item-resumen button {
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.item-resumen button:hover {
+  background-color: #e63946;
+}
+
+.resumen-acciones {
+  margin-top: 20px;
+  text-align: center; /* Centra los botones */
+}
+
+.resumen-acciones button {
+  margin: 0 10px; /* Espaciado entre botones */
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.resumen-acciones button:hover {
+  background-color: #3e8e41;
+}
+
+.total-compra {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: right;
+  margin-top: 10px;
+  color: #2d772d;
 }

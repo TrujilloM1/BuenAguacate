@@ -58,47 +58,67 @@
         <!-- Encabezado decorativo de la sección -->
         <div class="seccion-titulo">
             <div class="barra-lateral"></div>
-            <h2 class="tituloBarra">Productos</h2>
+            <h2 class="tituloBarra">Recetas</h2>
             <div class="barra-lateral"></div>
           </div>
           <section class="contenedor-productos">
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/yS6M5l7.jpeg" alt="Aguacate Hass Jumbo">
-              <h3>AGUACATE HASS<br><span>JUMBO</span></h3>
-              <p>+230 gr<br>$ 25.000 kg</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/JujfgR4.jpeg" alt="Aguacate Hass Primera">
-              <h3>AGUACATE HASS<br><span>PRIMERA</span></h3>
-              <p>170 gr a 229 gr<br>$ 20.000 kg</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/XDpYbbX.jpeg" alt="Aguacate Hass Segunda">
-              <h3>AGUACATE HASS<br><span>SEGUNDA</span></h3>
-              <p>130 gr a 169 gr<br>$ 15.000 kg</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/997a4jr.png" alt="Aguacate Hass Segunda">
-              <h3>AGUACATE HASS<br><span>TERCERA</span></h3>
-              <p>-129 gr<br>$ 10.000 kg</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/xcASE9U.png" alt="Aguacate Hass Segunda">
-              <h3>GUACAMOLE<br><span>HASS</span></h3>
-              <p>100gr<br>$  5.000</p>
-            </div>
-        
-            <div class="tarjeta">
-              <img src="https://i.imgur.com/7fXRR1u.png" alt="Aguacate Hass Segunda">
-              <h3>ACEITE<br><span>DE AGUACATE</span></h3>
-              <p>50ml<br>$  50.000</p>
-            </div>
-        
-          </section>
+    <!-- Tarjetas de productos -->
+    <div class="tarjeta" data-nombre="AGUACATE HASS JUMBO" data-precio="25000" data-tipo="kg" data-peso-aprox="250">
+      <img src="https://i.imgur.com/yS6M5l7.jpeg" alt="Aguacate Hass Jumbo">
+      <h3>AGUACATE HASS<br><span>JUMBO</span></h3>
+      <p>+230 gr<br>$ 25.000 kg</p>
+      <div class="acciones"></div>
+    </div>
+
+    <div class="tarjeta" data-nombre="AGUACATE HASS PRIMERA" data-precio="20000" data-tipo="kg" data-peso-aprox="200">
+      <img src="https://i.imgur.com/JujfgR4.jpeg" alt="Aguacate Hass Primera">
+      <h3>AGUACATE HASS<br><span>PRIMERA</span></h3>
+      <p>170 gr a 229 gr<br>$ 20.000 kg</p>
+      <div class="acciones"></div>
+    </div>
+
+    <div class="tarjeta" data-nombre="AGUACATE HASS SEGUNDA" data-precio="15000" data-tipo="kg" data-peso-aprox="150">
+      <img src="https://i.imgur.com/XDpYbbX.jpeg" alt="Aguacate Hass Segunda">
+      <h3>AGUACATE HASS<br><span>SEGUNDA</span></h3>
+      <p>130 gr a 169 gr<br>$ 15.000 kg</p>
+      <div class="acciones"></div>
+    </div>
+
+    <div class="tarjeta" data-nombre="AGUACATE HASS TERCERA" data-precio="10000" data-tipo="kg" data-peso-aprox="120">
+      <img src="https://i.imgur.com/997a4jr.png" alt="Aguacate Hass Tercera" />
+      <h3>AGUACATE HASS<br><span>TERCERA</span></h3>
+      <p>-129 gr<br>$ 10.000 kg</p>
+      <div class="acciones"></div>
+    </div>
+
+    <div class="tarjeta" data-nombre="GUACAMOLE HASS" data-precio="4000" data-tipo="unidad" data-cantidad-unidad="200">
+      <img src="https://i.imgur.com/xcASE9U.png" alt="Guacamole Hass" />
+      <h3>GUACAMOLE<br><span>HASS</span></h3>
+      <p>200gr por recipiente<br>$ 4.000</p>
+      <div class="acciones"></div>
+    </div>
+    
+    <div class="tarjeta" data-nombre="ACEITE DE AGUACATE" data-precio="14000" data-tipo="unidad" data-cantidad-unidad="200">
+      <img src="https://i.imgur.com/7fXRR1u.png" alt="Aceite de Aguacate" />
+      <h3>ACEITE<br><span>DE AGUACATE</span></h3>
+      <p>200ml por botella<br>$ 14.000</p>
+      <div class="acciones"></div>
+    </div>
+  </section>
+
+  <!-- Resumen de compra -->
+  <section id="resumen-compra">
+    <div class="contenedor-resumen">
+      <h2>Resumen de compra</h2>
+      <div id="lista-compra"></div>
+      <div id="total-compra" class="total-compra"></div>
+      <div class="resumen-acciones">
+        <button onclick="window.location.href='pago.html'">Comprar todo</button>
+
+        <button id="borrar-todo">Borrar todo</button>
+      </div>
+    </div>
+  </section>
    <!-- Aqui inicia el footer -->
    <footer>
     <div class="footer-container">
@@ -114,7 +134,7 @@
         <ul>
           <li><a href="recetas.html">Recetas</a></li>
           <li><a href="comercializacion.html">Comercialización</a></li>
-          <li><a href="contactanos.html">Contacto</a></li>
+          <li><a href="contactenos.html">Contacto</a></li>
         </ul>
       </div>
   
