@@ -4,11 +4,12 @@ body {
     padding: 2rem;
   }
   
-  .contenedor-pago {
+  body .contenedor-pago {
+    width: 100%;
     max-width: 500px;
     margin: auto;
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
@@ -71,4 +72,48 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      background-color: rgb(255, 255, 255); /* Cambia el fondo para verificar */
+    }
+  
+    .contenedor-pago {
+      max-width: 90vw; /* Ajusta el ancho máximo al 90% del viewport */
+      padding: 1.5rem; /* Reduce el padding interno */
+      box-shadow: none; /* Opcional: elimina la sombra para simplificar */
+    }
+  
+    h2 {
+      font-size: 1.8rem; /* Aumenta el tamaño del título */
+      margin-bottom: 1rem;
+    }
+
+    form label {
+      font-size: 1rem; /* Aumenta el tamaño de las etiquetas */
+    }
+  
+    form input,
+    form select {
+      padding: 0.75rem; /* Mantén el padding cómodo */
+      font-size: 1rem; /* Aumenta el tamaño del texto */
+    }
+  
+    .resumen {
+      padding: 0.75rem; /* Reduce el padding interno */
+      font-size: 1rem; /* Aumenta el tamaño del texto */
+    }
+  
+    .boton-pagar {
+      padding: 0.75rem; /* Ajusta el padding del botón */
+      font-size: 1rem; /* Aumenta el tamaño del texto */
+    }
+  
+    .cerrar-formulario {
+      padding: 5px; /* Reduce el tamaño del botón cerrar */
+      font-size: 0.9rem; /* Ajusta el tamaño del texto */
+      top: 5px; /* Ajusta la posición */
+      right: 5px;
+    }
   }
