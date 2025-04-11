@@ -1,12 +1,12 @@
 /* Aqui inicia el encabezado para cada pagina */
 /* ENCABEZADO SUPERIOR CON LOGO */
 .encabezado-superior {
-  background: linear-gradient(to bottom, #D5FF81, #D5FF81);
+  background: linear-gradient(to bottom, #f1d092, #f1d092);
   padding: 5px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .contenedor-logo-texto {
@@ -27,7 +27,7 @@
   font-weight: 400;
   font-style: normal;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 4px rgba(0,0,0,1);
 }
 
 /* Adaptabilidad para móviles */
@@ -41,104 +41,165 @@
 }
 /* Aqui llega el encabezado para cada pagina */
 
+
 /* Aqui inicia la barra de navegacion para cada pagina */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  
 }
 
 /* Navbar */
 .navbar {
-
-  position: relative; /* o absolute si es necesario */
-  z-index: 10; /* Un valor alto para que esté sobre las imágenes */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar */
-  background-color: #532F12;
+  
+  justify-content: center;
+  background: linear-gradient(90deg,rgb(83, 47, 18));
+  padding: 10px 25px;
   height: 70px;
-  padding: 0 10px;
+  position: sticky;
+  top: 0;
   display: flex;
-  justify-content: space-between;
-  grid-template-columns: 1fr auto;
   align-items: center;
+  background: linear-gradient(90deg, rgb(83, 47, 18));
+  color: white;
+  z-index: 1000;
+  height: 70px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Menús desplegables */
-.navbar .dropdown-menu {
-  position: absolute;
-  z-index: 11; /* Asegúrate de que los menús estén sobre la barra de navegación */
-  background-color: #fff; /* Fondo para que no se mezclen con las imágenes */
-  border: 1px solid #ddd; /* Opcional: borde para distinguirlos */
-}
-
-/* Enlaces a la izquierda */
-.nav-left {
+.navbar-content {
   display: flex;
-  align-items: space-between;
-  justify-content: space-between;
-  flex: 1;
-  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-/* Logo */
-
-
-/* Estilo de los enlaces  del drop de nosotros*/
-.nav-link {
-  color: #ffffff;
-  display: flex;
-  text-decoration: none;
-  font-size: 16px; /* Reduce el tamaño del texto */
-  padding: 25px 100px; /* Ajusta el padding */
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Dropdown */
 .nav-dropdown {
   position: relative;
 }
-/*Aqui se ajusta el drop de nosotros*/
+
+/* Enlaces de navegación */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 25px 70px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.nav-link.active {
+  background-color: #D5FF81;
+  color: #532F12;
+  font-weight: bold;
+}
+
+/* Subrayado animado */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Menú Hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 28px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Dropdown */
+.nav-dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+visibility: visible;
+}
+
 .dropdown-content {
+
+  top: 100%;
+  background-color: rgb(83, 47, 18, 0.95);
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 999;
   display: none;
   position: absolute;
-  top: 102%;
   left: 0;
-  background-color: rgba(83, 47, 18, 0.5);
-  border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: 140px; /* Reduce el ancho mínimo */
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
 }
 
 .dropdown-content a {
-  display: block;
+  display: flex;
   color: white;
-  font-size: 16px; /* Reduce el tamaño del texto */
-  padding: 15px 50px; /* Ajusta el padding */
+  font-size: 16px;
+  padding: 15px 50px;
   text-decoration: none;
 }
+
+
 
 .dropdown-content a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.nav-dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Botón de usuario */
-.nav-right {
-  display: flex;
-  margin-left: 30px; /* Reduce el margen izquierdo */
-  align-items: center;
-}
-
+/* Menú de usuario */
 .user-btn {
   background: none;
   border: none;
@@ -150,110 +211,146 @@ body {
 }
 
 .user-menu {
-  display: none;
   position: absolute;
-  top: 137%;
+  top: 100%;
+  left: 0;
+  background-color:rgb(83, 47, 18, 0.95);
+  border-radius: 6px;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 999;
+  display: none;
   right: 0;
-  background-color: rgba(83, 47, 18, 0.5);
-  border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: 140px; /* Reduce el ancho mínimo */
 }
-/* Es para ajustar el drop de usuario*/
+.LogoUser {
+  border-radius: 25px;
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+}
+
 .user-menu a {
+  background-color: rgba(255,255,255,0.1);
   color: white;
-  font-size: 14px; /* Reduce el tamaño del texto */
-  padding: 12px 40px; /* Ajusta el padding */
+  font-size: 14px;
+  padding: 12px 40px;
   display: block;
   text-decoration: none;
 }
-/* drop de usuario*/
+
 .user-menu a:hover {
   background-color: #f1f1f18a;
   color: rgb(255, 255, 255);
 }
 
 .user-menu.show {
-  display: block;
+  display: flex;
 }
-@media (max-width: 600px) {
-  .navbar {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      height: auto;
-      padding: 5% 8%;
-      gap: 0.5%; /* Reduce el espacio entre elementos */
-  }
 
-  .nav-left, .nav-right {
+/* Sombra al hacer scroll */
+.scrolled {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hamburger {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5%; /* Reduce el espacio entre elementos */
+      flex-direction: column;
+      cursor: pointer;
   }
 
-  .nav-link {
-      font-size: 0.8rem; /* Reduce el tamaño del texto */
-      padding: 5% 5%; /* Ajusta el padding */
-      text-align: center;
+  .nav-links {
+      position: absolute;
+      top: 70px;
+      background-color: rgb(83, 47, 18, 0.95);
+      flex-direction: column;
+      width: 200px;
+      padding: 20px;
+      border-radius: 12px;
+      display: none;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
-  .logo {
-      width: 8%; /* Reduce el tamaño del logo */
-      height: auto;
-  }
-  .user-btn {
-      font-size: 0.8rem; /* Reduce el tamaño del texto */
-      padding: 5%; /* Ajusta el padding */
-      border-radius: 5px;
-      width: 8%; /* Reduce el tamaño del botón de usuario */
-      height: auto;
-  }
-  .user-menu {
-      min-width: 80px; /* Reduce el ancho mínimo del menú de usuario */
+  .nav-dropdown {
+      width: 100%;
+      position: relative;
   }
 
+  .dropdown-content,
+.user-menu {
+  position: absolute;
+  top: 40px; /* Ajusta según el tamaño del botón */
+  width: max-content; /* O un ancho fijo como 140px si lo prefieres */
+  max-width: 90vw;
+  left: -110px;
+  background-color: rgb(83, 47, 18, 0.95);
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
-/* Aqui finaliza la barra de navegacion para cada pagina */
-  
-  
-  /* Imagen hero ocupando pantalla */
-  .hero {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 180px); /* Resta el espacio del header y footer */
-    overflow: hidden;
-  }
-  
-  .hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Botones de navegación del carrusel */
-  .boton-carrusel {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.6);
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-  
-  .boton-carrusel.izq {
-    left: 20px;
-  }
-  
-  .boton-carrusel.der {
-    right: 20px;
+.user-dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  opacity: 1;
+  visibility: visible;
+  background-color: transparent;
+  box-shadow: none;
+  padding-left: 10px;
+}
+
+.nav-dropdown.show .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-content a {
+  padding: 10px 15px;
+  color: white;
+}
+
+  .nav-links.active {
+      display: flex;
+      animation: fadeIn 0.3s ease-in-out;
   }
 
-  /* Footer el style del footer */
+  .nav-links li {
+      text-align: center;
+      padding: 12px 0;
+  }
+  .navbar-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Aqui finaliza la barra de navegacion para cada pagina */
+
+
+/* Footer el style del footer */
 footer {
   background-color: rgb(83, 47, 18);
   padding: 10px; /* Reduce el padding */
@@ -331,7 +428,7 @@ footer {
 }
 
 .footer-subscribe button {
-  background-color: #EFC05C;
+  background-color: #59a14f;
   color: white;
   font-size: 2.5rem; /* Reduce el tamaño de la fuente */
   padding: 25px 70px; /* Reduce el padding */
@@ -370,7 +467,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  background-color: #D5FF81;
+  background-color: #f1d092;
   padding: 20px 0;
 }
 
@@ -380,7 +477,7 @@ footer {
   font-weight: 400;
   font-style: normal;
   color: white;
-  text-shadow: 2px 2px 5px #444444;
+  text-shadow: 2px 2px 4px rgba(0,0,0,1);
   margin: 0;
 }
 
@@ -410,5 +507,38 @@ footer {
   }
 }
 /* hasta aqui va el footer y la barra divisora */
+/*---------------------------------------------*/
+/* Imagen hero ocupando pantalla */
+.hero {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 180px); /* Resta el espacio del header y footer */
+  overflow: hidden;
+}
 
-  
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botones de navegación del carrusel */
+.boton-carrusel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.boton-carrusel.izq {
+  left: 20px;
+}
+
+.boton-carrusel.der {
+  right: 20px;
+}
