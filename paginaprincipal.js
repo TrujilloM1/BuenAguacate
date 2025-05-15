@@ -69,12 +69,12 @@ const btnIzquierda = document.querySelector(".carrusel-btn.izquierda");
 const btnDerecha = document.querySelector(".carrusel-btn.derecha");
 
 const imagenes = [
-  "img/aguacate01.jpeg",
-  "img/aguacate02.jpeg",
-  "img/aguacate03.jpeg",
-  "img/aguacate04.jpeg",
-  "img/aguacate05.jpeg",
-  "img/aguacate06.jpeg"
+  "imagenes/aguacate01.jpeg",
+  "imagenes/aguacate02.jpeg",
+  "imagenes/aguacate03.jpeg",
+  "imagenes/aguacate04.jpeg",
+  "imagenes/aguacate05.jpeg",
+  "imagenes/aguacate06.jpeg"
 ];
 
 let indiceActual = 0;
