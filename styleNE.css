@@ -523,7 +523,7 @@ footer {
 .item {
     flex: 0 0 auto;
     width: 250px;
-    background-color: #e6ffcc;
+    background-color: #532f1251;
     border-radius: 10px;
     padding: 5px;
     text-align: center;
@@ -546,7 +546,7 @@ footer {
     margin-top: 10px;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     font-size: 1rem;
-    color: #3e8e41;
+    color: #532F12;
     font-weight: bold;
 }
 
